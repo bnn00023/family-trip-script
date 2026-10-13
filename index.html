@@ -81,6 +81,14 @@
   nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; font-size: 0.95rem; }
   nav a { color: var(--accent); text-decoration: none; }
   nav a:hover { text-decoration: underline; }
+  .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0 20px; }
+  .side { display: flex; flex-direction: column; gap: 2px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; color: var(--ink); text-decoration: none; }
+  .side:hover { border-color: var(--accent); }
+  .side:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .side b { color: var(--accent); }
+  .side span { color: var(--muted); font-size: 0.9rem; }
+  .side .get { color: var(--accent); font-weight: 600; margin-top: 4px; }
+  @media (max-width: 720px) { .sides { grid-template-columns: 1fr; } }
   footer { margin-top: 60px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 16px; }
   footer a { color: var(--accent); }
   footer div { margin-bottom: 6px; }
@@ -91,9 +99,10 @@
 <header>
   <h1>家族旅遊短劇：早知道就出門了</h1>
   <div class="byline">四人演出 · 約 7 分半 · 單一場景 · 六段</div>
-  <div class="byline version">版本 v3.2 · 更新時間 2026-10-13 13:52</div>
+  <div class="byline version">版本 v3.3 · 更新時間 2026-10-13 15:41</div>
   <nav>
     <a href="#intro">劇組介紹</a>
+    <a href="#sides">台詞本下載</a>
     <a href="#adapt">改編說明</a>
     <a href="#theme">核心宗旨</a>
     <a href="#characters">角色設定</a>
@@ -113,6 +122,15 @@
   <div><b>爸爸 阿明</b>（冠豪 飾）<br>阿嬤的兒子，媽媽跟老婆兩邊都不敢得罪，夾在中間負責打圓場，只敢默默犧牲。</div>
   <div><b>媽媽 淑芬</b>（雅典娜 飾）<br>有自己的想法，怕婆婆生氣、讓老公為難，以大局為重的媳婦，但忍耐到最後大爆發。</div>
   <div><b>孫女 小瑜</b>（鈺庭 飾）<br>阿嬤的孫女，對行程最了解，很興奮帶領家人出遊，覺得長輩只會嫌。</div>
+</div>
+
+<h2 id="sides">台詞本下載</h2>
+<p>每個角色一份完整劇本，自己的台詞加粗並畫底線，（　）裡的動作不畫線、不用唸。A4 直式，直接列印即可。</p>
+<div class="sides">
+  <a class="side" href="sides/amah.pdf" download="台詞本_阿嬤金花_凱莉.pdf"><b>阿嬤 金花</b><span>凱莉 飾 · 23 句台詞 · A4 4 頁</span><span class="get">下載 PDF</span></a>
+  <a class="side" href="sides/aming.pdf" download="台詞本_爸爸阿明_冠豪.pdf"><b>爸爸 阿明</b><span>冠豪 飾 · 10 句台詞 · A4 4 頁</span><span class="get">下載 PDF</span></a>
+  <a class="side" href="sides/shufen.pdf" download="台詞本_媽媽淑芬_雅典娜.pdf"><b>媽媽 淑芬</b><span>雅典娜 飾 · 13 句台詞 · A4 4 頁</span><span class="get">下載 PDF</span></a>
+  <a class="side" href="sides/xiaoyu.pdf" download="台詞本_孫女小瑜_鈺庭.pdf"><b>孫女 小瑜</b><span>鈺庭 飾 · 17 句台詞 · A4 4 頁</span><span class="get">下載 PDF</span></a>
 </div>
 
 <h2 id="adapt">改編說明</h2>
@@ -425,8 +443,8 @@
 </ul>
 
 <footer>
-  <div>版本 v3.2 · 更新時間 2026-10-13 13:52</div>
-  <div>版本紀錄：v1.0（2026-10-10 22:05）首版上線，十二格兩段式分鏡；v1.1（2026-10-10 22:19）加入版號與更新時間；v2.0（2026-10-11 21:20）改為五幕結構，新增劇組介紹與完整台詞；v3.0（2026-10-13 13:40）改為飯店房間單一場景六段式，新增角色動機、關係與衝突圖、舞台走位圖、站坐跪姿式、演法提示，以及配合現場一桌兩椅的服裝與道具清單；v3.1（2026-10-13 13:46）移除與新版劇本不符的角色圖與 v1 分鏡圖；v3.2（2026-10-13 13:52）米袋改為鑄鐵鍋，道具只需準備一個有蓋的鍋。</div>
+  <div>版本 v3.3 · 更新時間 2026-10-13 15:41</div>
+  <div>版本紀錄：v1.0（2026-10-10 22:05）首版上線，十二格兩段式分鏡；v1.1（2026-10-10 22:19）加入版號與更新時間；v2.0（2026-10-11 21:20）改為五幕結構，新增劇組介紹與完整台詞；v3.0（2026-10-13 13:40）改為飯店房間單一場景六段式，新增角色動機、關係與衝突圖、舞台走位圖、站坐跪姿式、演法提示，以及配合現場一桌兩椅的服裝與道具清單；v3.1（2026-10-13 13:46）移除與新版劇本不符的角色圖與 v1 分鏡圖；v3.2（2026-10-13 13:52）米袋改為鑄鐵鍋，道具只需準備一個有蓋的鍋；v3.3（2026-10-13 15:41）新增四個角色的台詞本 PDF 下載。</div>
 </footer>
 </main>
 </body>

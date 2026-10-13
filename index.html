@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>家族旅遊短劇：早知道就出門了</title>
-<meta name="description" content="四人演出、6 到 8 分鐘的五幕短劇，含劇組介紹、故事大綱、核心宗旨、分幕設定、完整台詞與角色圖。">
+<meta name="description" content="四人演出、約 7 分半的單一場景舞台劇，含角色動機、關係與衝突圖、舞台走位圖、站坐跪姿式、完整台詞與演法提示。">
 <style>
   :root {
     --bg: #faf6f0;
@@ -14,16 +14,22 @@
     --accent: #b5543c;
     --line: #e6ddd2;
     --soft: #f3ebe1;
+    --edge: #9c9188;
+    --hot: #c43c35;
+    --focus: #2f6fd0;
+    --focus-tint: rgba(47, 111, 208, 0.12);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #1b1815; --paper: #242019; --ink: #ece4da; --muted: #a79c90;
       --accent: #e08a6f; --line: #3a332c; --soft: #2d2721;
+      --edge: #7d746b; --hot: #ec6a5f; --focus: #6fa3f0; --focus-tint: rgba(111, 163, 240, 0.16);
     }
   }
   :root[data-theme="dark"] {
     --bg: #1b1815; --paper: #242019; --ink: #ece4da; --muted: #a79c90;
     --accent: #e08a6f; --line: #3a332c; --soft: #2d2721;
+    --edge: #7d746b; --hot: #ec6a5f; --focus: #6fa3f0; --focus-tint: rgba(111, 163, 240, 0.16);
   }
   * { box-sizing: border-box; }
   body {
@@ -43,7 +49,7 @@
   h3 { font-size: 1.1rem; margin: 32px 0 8px; color: var(--accent); }
   h3 small { color: var(--muted); font-weight: normal; font-size: 0.9rem; margin-left: 8px; }
   p { margin: 0 0 14px; }
-  ul { padding-left: 1.2em; }
+  ul, ol { padding-left: 1.4em; }
   li { margin-bottom: 8px; }
   .lead { font-size: 1.05rem; }
   .note {
@@ -60,14 +66,20 @@
   .cast b { color: var(--accent); }
   .script { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; margin: 12px 0 8px; }
   .script p { margin: 0 0 8px; }
-  .script .dir { color: var(--muted); font-style: normal; margin: 10px 0; }
+  .script .dir { color: var(--muted); margin: 10px 0; }
   .script .who { font-weight: 700; margin-right: 6px; }
   .script .act { color: var(--muted); }
+  .block {
+    border-radius: 6px; padding: 10px 14px; margin: 10px 0;
+    background: var(--soft); font-size: 0.95rem;
+  }
+  .block b { color: var(--accent); margin-right: 6px; }
   figure { margin: 20px 0 28px; }
   figure img {
     display: block; width: 100%; height: auto; border-radius: 8px;
     border: 1px solid var(--line); background: var(--paper);
   }
+  figure svg { display: block; width: 100%; height: auto; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; }
   figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   @media (max-width: 720px) { .grid, .cast { grid-template-columns: 1fr; } h1 { font-size: 1.6rem; } }
@@ -76,21 +88,25 @@
   nav a:hover { text-decoration: underline; }
   footer { margin-top: 60px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 16px; }
   footer a { color: var(--accent); }
+  footer div { margin-bottom: 6px; }
 </style>
 </head>
 <body>
 <main>
 <header>
   <h1>家族旅遊短劇：早知道就出門了</h1>
-  <div class="byline">四人演出 · 6 到 8 分鐘 · 五幕</div>
-  <div class="byline version">版本 v2.0 · 更新時間 2026-10-11 21:20</div>
+  <div class="byline">四人演出 · 約 7 分半 · 單一場景 · 六段</div>
+  <div class="byline version">版本 v3.0 · 更新時間 2026-10-13 13:40</div>
   <nav>
     <a href="#intro">劇組介紹</a>
-    <a href="#synopsis">故事大綱</a>
+    <a href="#adapt">改編說明</a>
     <a href="#theme">核心宗旨</a>
-    <a href="#scenes">分幕設定</a>
-    <a href="#script">完整台詞</a>
-    <a href="#notes">演出提醒</a>
+    <a href="#characters">角色設定</a>
+    <a href="#relations">關係與衝突</a>
+    <a href="#stage">舞台與走位</a>
+    <a href="#costume">服裝與道具</a>
+    <a href="#script">完整劇本</a>
+    <a href="#notes">排練提示</a>
     <a href="#art">角色圖</a>
   </nav>
 </header>
@@ -99,177 +115,320 @@
 <p><strong>劇名：</strong>早知道就出門了</p>
 <p><strong>成員：</strong>凱莉、雅典娜、冠豪、鈺庭</p>
 <div class="cast">
-  <div><b>阿嬤 金花</b>（＿ 飾，中心角色）<br>阿明的媽媽，第一次出國，不會說好聽話，只想著省錢。</div>
-  <div><b>爸爸 阿明</b>（＿ 飾）<br>阿嬤的兒子，媽媽跟老婆兩邊都不敢得罪，夾在中間負責打圓場，只敢默默犧牲。</div>
-  <div><b>媽媽 淑芬</b>（＿ 飾）<br>有自己的想法，怕婆婆生氣、讓老公為難，以大局為重的媳婦，但忍耐到最後大爆發。</div>
-  <div><b>孫女 小瑜</b>（＿ 飾）<br>阿嬤的孫女，對行程最了解，很興奮帶領家人出遊，覺得長輩只會嫌。</div>
+  <div><b>阿嬤 金花</b>（凱莉 飾，中心角色）<br>阿明的媽媽，第一次出國，不會說好聽話，只想著省錢。</div>
+  <div><b>爸爸 阿明</b>（冠豪 飾）<br>阿嬤的兒子，媽媽跟老婆兩邊都不敢得罪，夾在中間負責打圓場，只敢默默犧牲。</div>
+  <div><b>媽媽 淑芬</b>（雅典娜 飾）<br>有自己的想法，怕婆婆生氣、讓老公為難，以大局為重的媳婦，但忍耐到最後大爆發。</div>
+  <div><b>孫女 小瑜</b>（鈺庭 飾）<br>阿嬤的孫女，對行程最了解，很興奮帶領家人出遊，覺得長輩只會嫌。</div>
 </div>
 
-<h2 id="synopsis">故事大綱</h2>
-<p class="lead">三代同堂第一次全家出門旅遊，孫女小瑜很興奮，事先查了排行程，阿嬤卻整趟旅程一直嫌，導致中間爆發祖孫衝突、婆媳衝突與兒子忙著打圓場等情形。</p>
-<p>旅途中出現一些意外，讓每個人重新檢視彼此說不出口的重視與愛，並在旅途尾聲開始互相逗趣，溫馨收場。</p>
+<h2 id="adapt">改編說明</h2>
+<p class="lead">整齣戲收成一個地點：<strong>日本飯店房間，旅程最後一晚，全家在收行李</strong>。原本五幕散在老街口、老街、小吃攤、飯店的衝突，全部在「行李超重、要丟誰的東西」這一件事上重新引爆，不用換景、不用搬道具。</p>
+<p>改編保留原劇本的核心：阿嬤整趟都在嫌，但大家想要的東西她早就偷偷買好了。改動的地方有三個。</p>
+<ol>
+  <li>「不要吵架的宣誓」移到開場，由小瑜發起，阿嬤是唯一沒舉手的人，這個缺口在結尾補上。</li>
+  <li>老街的「不讓買」、小吃攤的「嫌貴」、扛米扭傷，都改成在房間裡被大家翻舊帳講出來，衝突用回憶推進，不用演出來。</li>
+  <li>阿嬤拿出禮物的時機放在最後，而且禮物就藏在那堆讓行李超重的米袋裡，讓「超重」本身就是愛的證據。</li>
+</ol>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>項目</th><th>設定</th></tr></thead>
+  <tbody>
+    <tr><td class="n">片長</td><td>約 7 分半（台詞約 1,600 字，加上走位停頓）</td></tr>
+    <tr><td class="n">地點</td><td>日本飯店雙人房，回國前一晚</td></tr>
+    <tr><td class="n">時間</td><td>晚上九點多</td></tr>
+    <tr><td class="n">演員</td><td>凱莉（阿嬤金花）、雅典娜（媽媽淑芬）、冠豪（爸爸阿明）、鈺庭（孫女小瑜）</td></tr>
+    <tr><td class="n">道具</td><td>現場提供一張桌子、兩張椅子：兩張椅子併排當床，桌子當飯店書桌、上面疊米袋。其他自備道具見〈服裝與道具〉</td></tr>
+  </tbody>
+</table>
+</div>
 
 <h2 id="theme">核心宗旨</h2>
 <p class="lead">不同世代之間愛的表達方式需要用心感受與聆聽：是拒絕，還是不會說出口的愛？</p>
 <div class="note">演完後可以問觀眾一個問題：「你家長輩的口頭禪是什麼？你覺得他真正想說的是什麼？」</div>
 
-<h2 id="scenes">分幕設定</h2>
+<h2 id="characters">角色設定</h2>
+<p>每個角色只有一個核心動機，所有台詞和動作都從這個動機長出來。演員卡住的時候，回頭看「他現在最怕什麼」。</p>
 <div class="tablewrap">
 <table>
-  <thead><tr><th></th><th>幕 1</th><th>幕 2</th><th>幕 3</th><th>幕 4</th><th>幕 5</th></tr></thead>
+  <thead><tr><th>角色</th><th>個性</th><th>核心動機（他最怕的事）</th><th>身體語彙</th><th>口頭禪</th></tr></thead>
   <tbody>
-    <tr><td class="n">主題</td><td>不要吵架的宣誓</td><td>阿嬤不讓買，大家不滿（但阿嬤有買大家想要的東西）</td><td>各自分開購物</td><td>大家一起吃飯</td><td>收行李</td></tr>
-    <tr><td class="n">中心人物</td><td>孫女</td><td>阿嬤</td><td>阿嬤、兒子</td><td>阿嬤</td><td>阿嬤、媳婦</td></tr>
-    <tr><td class="n">地點</td><td>飯店 check-in 櫃檯</td><td>商店 A</td><td>商店 B</td><td>餐廳</td><td>飯店房間</td></tr>
-    <tr><td class="n">衝突</td><td>無，埋宣誓的伏筆</td><td>阿嬤一直嫌每個想買東西的人</td><td>阿嬤硬要扛重物結果扭傷腳</td><td>阿嬤嫌貴、嫌少、嫌不營養、嫌沒有自己煮的好吃</td><td>媳婦發現阿嬤買太多，行李超重</td></tr>
-    <tr><td class="n">道具</td><td>行李箱、斜背包、後背包；手一直維持推行李箱的姿勢</td><td>可愛小物（象徵大家想買的東西）</td><td>很多包很重的袋狀物（日本米）</td><td>椅子，假裝吃飯</td><td>可愛小物、日本米</td></tr>
-    <tr><td class="n">動作</td><td>孫女去旁邊領房卡，其他人在中央等她回來宣誓</td><td>自拍動作帶出已在景點中</td><td>阿嬤抱米，腳一拐坐倒</td><td>大家一起進入坐下，作勢吃飯</td><td>孫女爆發，爸爸制止，媳婦跟著爆發，阿嬤才拿出大家想買的東西</td></tr>
-    <tr><td class="n">時間</td><td>約 1 分</td><td>約 1 分半</td><td>約 1 分半</td><td>約 1 分半</td><td>約 2 分</td></tr>
+    <tr><td class="n">阿嬤 金花<br>（70 歲）</td><td>殼硬、嘴硬、看到價錢就頭痛；不會講好聽話，會做事</td><td>怕自己是兒子家的負擔。第一次出國，什麼都不懂，用「嫌」掩飾不安</td><td><strong>坐為主</strong>。腳扭傷，坐在床沿指揮全場，拒絕被扶；最後自己跪下去開米袋</td><td>「這個不用。」「我自己會。」</td></tr>
+    <tr><td class="n">爸爸 阿明<br>（45 歲）</td><td>和事佬，誰都不敢得罪，只會默默犧牲</td><td>怕這趟旅行在最後一晚破局。他要的只是「平安回家」</td><td><strong>一直在移動</strong>。永遠在搬東西、永遠站在兩個人中間，身體就是他的和事工具</td><td>「好了好了。」「我來我來。」</td></tr>
+    <tr><td class="n">媽媽 淑芬<br>（43 歲）</td><td>有主見、會規劃、顧大局；忍功一流，但忍到底會爆</td><td>怕被看成「不好的媳婦」，也怕讓老公為難。她要的是被當成這個家的一份子</td><td><strong>跪為主</strong>。跪在行李箱前整理，整理行李是她唯一能控制的事；爆發時站起來</td><td>「媽，沒關係。」（前半段）<br>「我有說話嗎？」（爆發後）</td></tr>
+    <tr><td class="n">孫女 小瑜<br>（20 歲）</td><td>熱情、性急、直接；行程全是她查的</td><td>怕自己查了三個月的心血沒人看見。她要的是一句「妳安排得很好」</td><td><strong>站為主</strong>。全場最會動的人，手機不離手；結尾跪到阿嬤身邊</td><td>「我查過了！」「阿嬤妳就是這樣！」</td></tr>
+  </tbody>
+</table>
+</div>
+<p>四個人的姿式分配是刻意的：阿嬤坐、淑芬跪、小瑜站、阿明一直在移動。誰改變姿式，就是誰的關係在變。</p>
+
+<h2 id="relations">關係與衝突</h2>
+<figure>
+<svg viewBox="0 0 760 372" role="img" aria-label="兩條衝突線都指向阿嬤，阿明站在所有線的中間" font-size="13" font-family="inherit">
+  <text x="24" y="28" font-size="15" font-weight="600" fill="var(--ink)">兩條衝突線都指向阿嬤，阿明站在所有線的中間</text>
+  <text x="24" y="46" font-size="11.5" fill="var(--muted)">紅線＝衝突線，灰線＝阿明的三條關係，虛線＝爆發時結成的同盟</text>
+  <g stroke="var(--hot)" stroke-width="2" fill="none">
+    <line x1="310" y1="118" x2="170" y2="292"/>
+    <line x1="450" y1="118" x2="590" y2="292"/>
+  </g>
+  <g stroke="var(--edge)" stroke-width="1.25" fill="none">
+    <line x1="380" y1="187" x2="380" y2="118"/>
+    <line x1="300" y1="232" x2="200" y2="292"/>
+    <line x1="460" y1="232" x2="560" y2="292"/>
+    <line x1="240" y1="320" x2="520" y2="320" stroke-dasharray="4 4"/>
+  </g>
+  <rect x="290" y="62" width="180" height="56" rx="8" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="380" y="86" text-anchor="middle" font-weight="600" fill="var(--ink)">阿嬤 金花</text>
+  <text x="380" y="102" text-anchor="middle" font-size="11.5" fill="var(--muted)">怕自己是兒子家的負擔</text>
+  <rect x="290" y="187" width="180" height="56" rx="8" fill="var(--focus-tint)" stroke="var(--focus)" stroke-width="2"/>
+  <text x="380" y="211" text-anchor="middle" font-weight="600" fill="var(--ink)">爸爸 阿明</text>
+  <text x="380" y="227" text-anchor="middle" font-size="11.5" fill="var(--muted)">怕旅行在最後一晚破局</text>
+  <rect x="60" y="292" width="180" height="56" rx="8" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="150" y="316" text-anchor="middle" font-weight="600" fill="var(--ink)">媽媽 淑芬</text>
+  <text x="150" y="332" text-anchor="middle" font-size="11.5" fill="var(--muted)">怕被當成不好的媳婦</text>
+  <rect x="520" y="292" width="180" height="56" rx="8" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="610" y="316" text-anchor="middle" font-weight="600" fill="var(--ink)">孫女 小瑜</text>
+  <text x="610" y="332" text-anchor="middle" font-size="11.5" fill="var(--muted)">怕三個月的心血沒人看見</text>
+  <text x="225" y="200" text-anchor="end" font-size="11.5" font-weight="600" fill="var(--ink)">婆媳衝突</text>
+  <text x="535" y="200" font-size="11.5" font-weight="600" fill="var(--ink)">祖孫衝突</text>
+  <text x="390" y="156" font-size="11.5" fill="var(--muted)">母子：不敢得罪</text>
+  <text x="262" y="252" text-anchor="end" font-size="11.5" fill="var(--muted)">夫妻</text>
+  <text x="498" y="252" font-size="11.5" fill="var(--muted)">父女</text>
+  <text x="380" y="310" text-anchor="middle" font-size="11.5" fill="var(--muted)">母女同盟：第四段並肩站</text>
+</svg>
+<figcaption>四人關係圖：兩條衝突線、三條家人線、一條同盟線</figcaption>
+</figure>
+<p>兩條衝突線都從阿嬤出發，阿明三條線都連著，所以他一動全場就動。淑芬和小瑜的同盟只在第四段出現，第五段又各自被阿嬤拉走。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>關係線</th><th>衝突是什麼</th><th>在劇中怎麼演</th><th>怎麼解</th></tr></thead>
+  <tbody>
+    <tr><td class="n">阿嬤與小瑜（祖孫）</td><td>「妳什麼都嫌」對「我又沒嫌」</td><td>第三段小瑜一步步逼近床，阿嬤坐著不動</td><td>第五段小瑜跪到阿嬤旁邊，拿到御守</td></tr>
+    <tr><td class="n">阿嬤與淑芬（婆媳）</td><td>媳婦忍了一整趟，婆婆不覺得自己有錯</td><td>第二段的「我就知道」，第四段的一口氣講完</td><td>第五段的陶碗，「妳拿起來又放下三次」</td></tr>
+    <tr><td class="n">阿明與淑芬（夫妻）</td><td>「你每次都好了好了」</td><td>第三段淑芬第一次把矛頭轉向老公</td><td>第四段阿明退半步、不再擋，就是他的回答</td></tr>
+    <tr><td class="n">阿明與阿嬤（母子）</td><td>兒子不敢讓媽媽難堪</td><td>阿明永遠在搬她的米</td><td>結尾「那明天我扛」</td></tr>
+    <tr><td class="n">阿明與小瑜（父女）</td><td>爸爸只會制止，不會站她那邊</td><td>第二段「小瑜。」</td><td>第六段阿明大笑，第一次跟女兒同一邊</td></tr>
+    <tr><td class="n">淑芬與小瑜（母女）</td><td>沒有衝突，是同盟</td><td>第四段並肩站在阿嬤面前</td><td>阿嬤一人分別收服</td></tr>
   </tbody>
 </table>
 </div>
 
-<h2 id="script">完整台詞</h2>
-<p>阿嬤的口頭禪是「好貴喔」「台灣也有」「早知道就不出門了」。幕 1 的三句宣誓會在後面被一一打破，幕 2 偷買的小物在幕 5 揭露。</p>
-
-<h3>幕 1　不要吵架的宣誓 <small>飯店 check-in 櫃檯 · 約 1 分鐘</small></h3>
-<div class="script">
-<p class="dir">［四人推行李箱進場，手保持推行李箱的姿勢。小瑜揹後背包，淑芬斜背包。］</p>
-<p><span class="who">小瑜</span><span class="act">（興奮）</span>到了到了！這家飯店我比價比了三個禮拜，離車站走路五分鐘！</p>
-<p><span class="who">阿嬤</span><span class="act">（看四周）</span>這麼大間……好貴喔。</p>
-<p><span class="who">阿明</span>媽，小瑜找的是特價的啦。</p>
-<p><span class="who">小瑜</span>我去領房卡，你們在這邊等我，不要亂跑！<span class="act">（跑到旁邊）</span></p>
-<p><span class="who">淑芬</span><span class="act">（小聲對阿明）</span>你媽才下飛機就開始了……</p>
-<p><span class="who">阿明</span><span class="act">（小聲）</span>忍一下，才第一天。</p>
-<p><span class="who">阿嬤</span><span class="act">（自言自語）</span>飛機坐那麼久，腰都痠了，早知道就不出門了。</p>
-<p><span class="who">小瑜</span><span class="act">（跑回來，舉房卡）</span>房卡拿到了！進房間之前，大家舉右手，跟我唸：這五天，不吵架。</p>
-<p><span class="who">全家</span><span class="act">（有氣無力）</span>這五天，不吵架。</p>
-<p><span class="who">小瑜</span>不嫌貴。</p>
-<p><span class="who">阿嬤</span>……<span class="act">（不唸）</span></p>
-<p><span class="who">小瑜</span>阿嬤！</p>
-<p><span class="who">阿嬤</span><span class="act">（勉強）</span>不嫌貴。</p>
-<p><span class="who">小瑜</span>有事情要說出來，不要憋在心裡。</p>
-<p><span class="who">全家</span>有事情要說出來，不要憋在心裡。</p>
-<p><span class="who">小瑜</span>好！出發！</p>
-<p><span class="who">阿嬤</span><span class="act">（推行李走，小聲）</span>好貴喔……</p>
-<p><span class="who">小瑜</span>阿嬤！</p>
-<p><span class="who">阿嬤</span>我說好累喔！</p>
-<p class="dir">［燈暗］</p>
+<h2 id="stage">舞台與走位</h2>
+<figure>
+<svg viewBox="0 0 760 428" role="img" aria-label="四個角落各歸一人，衝突都在中央發生" font-size="13" font-family="inherit">
+  <text x="24" y="28" font-size="15" font-weight="600" fill="var(--ink)">四個角落各歸一人，衝突都在中央發生</text>
+  <rect x="24" y="48" width="712" height="320" rx="8" fill="none" stroke="var(--line)" stroke-width="1.25" stroke-dasharray="6 4"/>
+  <rect x="532" y="68" width="176" height="56" rx="8" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="620" y="92" text-anchor="middle" font-weight="600" fill="var(--ink)">門口（側台入口）</text>
+  <text x="620" y="108" text-anchor="middle" font-size="11.5" fill="var(--muted)">阿明抱米從這裡進場</text>
+  <rect x="292" y="68" width="176" height="56" rx="8" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="380" y="92" text-anchor="middle" font-weight="600" fill="var(--ink)">床（兩張椅子併排）</text>
+  <text x="380" y="108" text-anchor="middle" font-size="11.5" fill="var(--muted)">阿嬤坐一張，傷腳擱另一張</text>
+  <rect x="268" y="180" width="224" height="56" rx="8" fill="var(--focus-tint)" stroke="var(--focus)" stroke-width="2"/>
+  <text x="380" y="204" text-anchor="middle" font-weight="600" fill="var(--ink)">中央</text>
+  <text x="380" y="220" text-anchor="middle" font-size="11.5" fill="var(--muted)">小瑜站著開場，三次爆發都在這裡</text>
+  <rect x="52" y="284" width="176" height="56" rx="8" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="140" y="308" text-anchor="middle" font-weight="600" fill="var(--ink)">行李箱（攤開）</text>
+  <text x="140" y="324" text-anchor="middle" font-size="11.5" fill="var(--muted)">淑芬跪著整理</text>
+  <rect x="532" y="284" width="176" height="56" rx="8" fill="var(--paper)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="620" y="308" text-anchor="middle" font-weight="600" fill="var(--ink)">桌子（米袋疊在上面）</text>
+  <text x="620" y="324" text-anchor="middle" font-size="11.5" fill="var(--muted)">阿嬤扶桌跪下，結尾全家聚這裡</text>
+  <text x="40" y="212" font-size="11.5" fill="var(--muted)">舞台左</text>
+  <text x="720" y="212" text-anchor="end" font-size="11.5" fill="var(--muted)">舞台右</text>
+  <rect x="24" y="376" width="712" height="28" rx="8" fill="var(--soft)" stroke="var(--edge)" stroke-width="1.25"/>
+  <text x="380" y="395" text-anchor="middle" fill="var(--ink)">觀眾席</text>
+</svg>
+<figcaption>舞台平面圖：五個分區，觀眾席在下方</figcaption>
+</figure>
+<p>舞台左右以觀眾面向舞台為準，觀眾的左手邊就是舞台左。五個分區各有一個主人，誰離開自己的區走進別人的區，就是關係在動。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>分區</th><th>道具</th><th>開場時誰在這裡、什麼姿式</th><th>這一區在劇中的意義</th></tr></thead>
+  <tbody>
+    <tr><td class="n">床</td><td>兩張椅子併排（現場提供）</td><td>阿嬤，坐在一張椅子上，綁繃帶的右腳擱在另一張</td><td>阿嬤的堡壘。前四段她都不離開，第四段站起來離開床就是轉折</td></tr>
+    <tr><td class="n">行李箱</td><td>攤開的行李箱、幾件衣服、伴手禮紙袋、行李秤</td><td>淑芬，跪</td><td>淑芬的控制感。她站起來離開箱子就是要開口了</td></tr>
+    <tr><td class="n">門口</td><td>無，用側台入口</td><td>阿明從這裡抱米進場</td><td>阿明的進出口，之後他不再回來，一直在人與人中間</td></tr>
+    <tr><td class="n">桌子</td><td>桌子（現場提供），桌上疊兩包米袋，最上面那包裝著御守、陶碗、小瓶清酒</td><td>沒人。第三包米由阿明抱進來放上桌</td><td>全劇的謎底。第五段四個人在這裡第一次聚在一起</td></tr>
+    <tr><td class="n">中央</td><td>空地</td><td>小瑜，站，拿手機</td><td>衝突區。誰站進來就是誰要開戰</td></tr>
+  </tbody>
+</table>
 </div>
 
-<h3>幕 2　阿嬤不讓買 <small>商店 A · 約 1 分半</small></h3>
+<h2 id="costume">服裝與道具</h2>
+<p class="lead">現場只用一張桌子、兩張椅子，其他全部可以從家裡帶。每個人一個主色，讓觀眾第一眼就分得出誰是誰：阿嬤紅、阿明藍、淑芬米白、小瑜黃。</p>
+
+<h3>穿著</h3>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>角色（演員）</th><th>主色</th><th>穿著</th><th>關鍵配件</th><th>為什麼這樣穿</th></tr></thead>
+  <tbody>
+    <tr><td class="n">阿嬤 金花<br>（凱莉）</td><td>紅</td><td>紅色或碎花上衣、深色寬鬆長褲、薄背心，布鞋或拖鞋</td><td>右腳踝繃帶、腰包、老花眼鏡掛脖子；可加髮網或灰白噴髮</td><td>腰包裝錢是她「什麼都要算」的象徵。繃帶要從第一段就讓觀眾看見，第四段的一跛才有前因</td></tr>
+    <tr><td class="n">爸爸 阿明<br>（冠豪）</td><td>藍</td><td>藍或灰色 Polo 衫紮進卡其褲、皮帶、襪子配室內拖鞋</td><td>毛巾掛脖子</td><td>毛巾＝整晚都在搬東西流汗。紮衣服、繫皮帶是老實爸爸的樣子</td></tr>
+    <tr><td class="n">媽媽 淑芬<br>（雅典娜）</td><td>米白</td><td>米白或大地色居家上衣、長褲，袖子捲起來</td><td>鯊魚夾把頭髮夾起來</td><td>捲袖子、夾頭髮＝正在做事的人。跪著整理行李時動作不會被衣服卡住</td></tr>
+    <tr><td class="n">孫女 小瑜<br>（鈺庭）</td><td>黃</td><td>黃色寬版 T 恤、牛仔褲或運動褲、球鞋</td><td>手機（殼要顯眼）、髮箍或棒球帽</td><td>年輕、好動、全場站著最多的人。手機是她查了三個月行程的證據，整場不離手</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="note">四個人都要跪或蹲，避免短裙和太緊的褲子，膝蓋處可以在褲子裡貼護膝。阿嬤的繃帶綁在襪子外面，方便換場和重綁。</div>
+
+<h3>道具清單</h3>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>道具</th><th>數量</th><th>誰用、什麼時候用</th><th>怎麼準備</th><th>負責</th></tr></thead>
+  <tbody>
+    <tr><td class="n">桌子</td><td>1</td><td>飯店書桌，米袋疊在上面；第四段阿嬤扶桌緣跪下</td><td>現場提供，放舞台右前</td><td>現場</td></tr>
+    <tr><td class="n">椅子</td><td>2</td><td>併排當床，阿嬤坐一張、傷腳擱另一張</td><td>現場提供，放舞台中後</td><td>現場</td></tr>
+    <tr><td class="n">行李箱</td><td>1</td><td>開場就攤開在舞台左前，淑芬跪著整理；第二段阿明壓箱蓋、小瑜秤重</td><td>中型以上，空箱就好</td><td>＿＿</td></tr>
+    <tr><td class="n">衣服</td><td>3–4 件</td><td>淑芬開場在摺</td><td>放行李箱裡，T 恤最好摺</td><td>＿＿</td></tr>
+    <tr><td class="n">行李秤</td><td>1</td><td>第二段小瑜勾上行李箱秤重</td><td>手提式行李秤；沒有就用任何有勾子的東西，小瑜唱數字就好</td><td>＿＿</td></tr>
+    <tr><td class="n">米袋</td><td>3</td><td>兩包開場就在桌上；第三包阿明開場抱進來</td><td>帆布袋或米色布袋塞報紙、毛巾，外面貼「お米」字樣；要看起來重、實際很輕</td><td>＿＿</td></tr>
+    <tr><td class="n">禮物米袋</td><td>（三包之一）</td><td>第四段阿嬤拖到地上打開</td><td>放在桌上最上面那包，袋口事先鬆開，裡面由上往下疊御守、陶碗、清酒</td><td>＿＿</td></tr>
+    <tr><td class="n">御守</td><td>1</td><td>第五段給小瑜</td><td>紅色小布袋綁繩子；有真的御守最好</td><td>＿＿</td></tr>
+    <tr><td class="n">小陶碗</td><td>1</td><td>第五段給淑芬</td><td>用塑膠碗或木碗代替，避免演出時摔破</td><td>＿＿</td></tr>
+    <tr><td class="n">小瓶清酒</td><td>1</td><td>第五段給阿明</td><td>小玻璃瓶或小寶特瓶，貼日文酒標</td><td>＿＿</td></tr>
+    <tr><td class="n">伴手禮紙袋</td><td>1</td><td>第三段淑芬拿在手上，第四段放下</td><td>有日文字的紙袋，裡面放一盒餅乾或空盒</td><td>＿＿</td></tr>
+    <tr><td class="n">手機</td><td>1</td><td>小瑜全場拿著</td><td>鈺庭自己的手機，演出時開飛航模式</td><td>鈺庭</td></tr>
+    <tr><td class="n">繃帶</td><td>1</td><td>阿嬤右腳踝，全場</td><td>彈性繃帶，綁在襪子外面</td><td>凱莉</td></tr>
+    <tr><td class="n">毛巾</td><td>1</td><td>阿明掛脖子，全場</td><td>白色或素色毛巾</td><td>冠豪</td></tr>
+  </tbody>
+</table>
+</div>
+<p>「負責」欄留空的，排練時分配好再填上。</p>
+
+<h2 id="script">完整劇本</h2>
+<p>每段開頭的「走位」是這段的起始位置，台詞中的（　）是當下的動作，每段結尾的「演法」是給演員的表演提示。</p>
+
+<h3>第一段　補宣誓 <small>0:00–1:00</small></h3>
 <div class="script">
-<p class="dir">［景點前，小瑜拿手機自拍。］</p>
-<p><span class="who">小瑜</span>大家靠近一點，三、二、一……<span class="act">（看手機）</span>欸，後面那間就是我說的店！進去進去！</p>
-<p class="dir">［進店，可愛小物擺在中間。］</p>
-<p><span class="who">淑芬</span><span class="act">（拿起一個）</span>這個好可愛，拿回去放辦公室……</p>
-<p><span class="who">阿嬤</span><span class="act">（伸手按住）</span>台灣也有啦，夜市一個五十塊。</p>
-<p><span class="who">淑芬</span><span class="act">（放下）</span>……好。</p>
-<p><span class="who">阿明</span><span class="act">（拿起另一個）</span>這個給我同事……</p>
-<p><span class="who">阿嬤</span>你同事有給你什麼嗎？放下。</p>
-<p><span class="who">阿明</span><span class="act">（放下）</span>好。</p>
-<p><span class="who">小瑜</span><span class="act">（舉起一個）</span>阿嬤，這個是這裡限定的欸，台灣真的沒有。</p>
-<p><span class="who">阿嬤</span><span class="act">（看價錢）</span>好貴喔！這個錢可以買幾斤米你知道嗎？</p>
-<p><span class="who">小瑜</span>阿嬤你今天早上才宣誓不嫌貴！</p>
-<p><span class="who">阿嬤</span>我沒有嫌，我是在算。</p>
-<p><span class="who">小瑜</span><span class="act">（放下，轉身）</span>算了，我去外面等。</p>
-<p><span class="who">淑芬</span><span class="act">（跟著）</span>我也去。</p>
-<p><span class="who">阿明</span><span class="act">（看著阿嬤）</span>媽……</p>
-<p><span class="who">阿嬤</span>你也去！在這裡看著我幹嘛。</p>
-<p class="dir">［三人出場。阿嬤左右看一下，把三個小物一口氣拿起來，走向櫃檯，壓低聲音。］</p>
-<p><span class="who">阿嬤</span>這三個……袋子要不透明的。</p>
-<p class="dir">［燈暗］</p>
+<div class="block"><b>走位</b>燈亮。淑芬跪在行李箱前摺衣服，背對門口。阿嬤坐在床的一端，綁著繃帶的右腳擱在另一張椅子上。小瑜站中央，拿手機。阿明抱著一包米從門口進來，走到桌子旁，放在另外兩包米旁邊，喘。</div>
+<p><span class="who">小瑜</span><span class="act">（舉起手機）</span>最後一晚！明天早上八點的車，六點半要起床，去機場的路線我存好了。<span class="act">（轉身看三個人）</span>所以，在睡覺之前，我們來宣誓。</p>
+<p><span class="who">阿明</span><span class="act">（直起腰）</span>又宣誓？</p>
+<p><span class="who">小瑜</span>出發那天在老街口不是宣誓過「全程不吵架」？結果呢？</p>
+<p><span class="who">淑芬</span><span class="act">（頭沒抬，繼續摺）</span>結果第二天就破功。</p>
+<p><span class="who">小瑜</span>所以今天補。明天回家路上，不、吵、架。舉手！</p>
+<p class="dir">（小瑜舉手。阿明立刻舉手。淑芬停了一下，手裡還拿著衣服，舉。阿嬤坐著不動，看向窗外的方向。）</p>
+<p><span class="who">小瑜</span>阿嬤。</p>
+<p><span class="who">阿嬤</span>我又沒吵。</p>
+<p><span class="who">小瑜</span>妳——</p>
+<p><span class="who">阿明</span><span class="act">（兩步走到中央，擋在小瑜和床之間）</span>好了好了，阿嬤的手在休息。來，收行李，收完睡覺。</p>
+<div class="block"><b>演法</b>小瑜的興奮要真的，不是演給觀眾看的，她相信宣誓有用。阿嬤那句「我又沒吵」不是賭氣，是真心這麼覺得，語氣平淡。阿明擋人的動作要快、要自然，這是他整晚第一次「擋」，之後還有三次，一次比一次慢。</div>
 </div>
 
-<h3>幕 3　各自分開購物 <small>商店 B · 約 1 分半 · 阿嬤與兒子</small></h3>
+<h3>第二段　秤重 <small>1:00–2:30</small></h3>
 <div class="script">
-<p class="dir">［淑芬和小瑜分頭去逛。阿嬤和阿明在超市，架上一袋袋日本米。］</p>
-<p><span class="who">阿明</span>媽，妳要買米？台灣也有米欸。<span class="act">（學阿嬤的語氣）</span></p>
-<p><span class="who">阿嬤</span>你懂什麼，這個米你三姑說很好吃。一包給三姑，一包給隔壁陳太太，一包給廟裡師姐……</p>
-<p><span class="who">阿明</span>媽，一包五公斤，妳要買四包？誰扛？</p>
-<p><span class="who">阿嬤</span>我扛。我以前菜市場一天扛幾十斤。</p>
-<p><span class="who">阿明</span>那是四十年前！</p>
-<p><span class="who">阿嬤</span><span class="act">（抱起兩袋）</span>看，很輕。</p>
-<p class="dir">［阿嬤走兩步，腳一拐，坐倒在地。］</p>
-<p><span class="who">阿嬤</span>哎喲……</p>
-<p><span class="who">阿明</span><span class="act">（衝過去）</span>媽！妳怎樣！</p>
-<p><span class="who">阿嬤</span>沒事沒事，腳扭一下而已。不要跟她們講。</p>
-<p><span class="who">阿明</span>怎麼不講！妳腳都腫了！</p>
-<p><span class="who">阿嬤</span>講了小瑜又要說我拖累大家。我來就是給你們添麻煩，早知道就不出門了。</p>
-<p><span class="who">阿明</span><span class="act">（蹲下扶她的腳，停一下）</span>媽，妳買米是要送人，那妳自己呢？妳有想要什麼嗎？</p>
-<p><span class="who">阿嬤</span>我老了，用不到。</p>
-<p><span class="who">阿明</span><span class="act">（嘆氣，把米全部扛到自己肩上，再扶起阿嬤）</span>那我扛米，妳扛我。</p>
-<p><span class="who">阿嬤</span>你扛得動？</p>
-<p><span class="who">阿明</span>我是妳兒子欸，一天扛幾十斤。</p>
-<p class="dir">［阿明一手扛米、一手扶阿嬤慢慢走出。燈暗］</p>
+<div class="block"><b>走位</b>小瑜退到行李箱旁。阿明蹲到行李箱另一側。阿嬤不動。</div>
+<p><span class="who">淑芬</span><span class="act">（拉行李箱拉鍊，拉不動）</span>阿明，你來壓一下。</p>
+<p><span class="who">阿明</span><span class="act">（跪下，雙手壓箱蓋，淑芬拉）</span>嘿——咻。</p>
+<p><span class="who">小瑜</span><span class="act">（拿出行李秤勾上去）</span>等一下，我秤一下。</p>
+<p class="dir">（小瑜用力提起來，看了秤，臉色變。放下。）</p>
+<p><span class="who">小瑜</span>二十八。</p>
+<p><span class="who">阿明</span>二十八什麼？</p>
+<p><span class="who">小瑜</span>公斤。廉航上限二十三。超五公斤。</p>
+<p><span class="who">淑芬</span><span class="act">（頭慢慢轉向桌上的米袋）</span>我就知道。</p>
+<p><span class="who">阿嬤</span>知道什麼？</p>
+<p><span class="who">淑芬</span><span class="act">（深吸一口氣，擠出笑）</span>媽，沒關係。我們看一下哪些可以不帶。</p>
+<p><span class="who">阿嬤</span>米不能不帶。</p>
+<p><span class="who">淑芬</span>三包米，一包兩公斤……</p>
+<p><span class="who">阿嬤</span>這米好。你們不是一直說日本的飯好吃？我回去煮給你們吃。不帶回去才是浪費。</p>
+<p><span class="who">小瑜</span><span class="act">（小聲，但故意讓人聽到）</span>整趟最浪費的就是那三包米。</p>
+<p><span class="who">阿明</span><span class="act">（還跪在箱子上，抬頭看小瑜一眼）</span>小瑜。</p>
+<div class="block"><b>演法</b>「二十八」之後留一拍，讓數字落地。淑芬那個「我就知道」是整晚第一個裂縫，頭轉過去的速度要慢。阿明說「小瑜」的時候是警告，不是罵，音量小。</div>
 </div>
 
-<h3>幕 4　大家一起吃飯 <small>餐廳 · 約 1 分半</small></h3>
+<h3>第三段　翻舊帳 <small>2:30–4:30</small></h3>
 <div class="script">
-<p class="dir">［四張椅子，大家坐下作勢吃飯。阿嬤的腳墊高，阿明不停偷看她的腳。］</p>
-<p><span class="who">小瑜</span>這家是排隊名店，我一個月前就訂了！</p>
-<p><span class="who">淑芬</span><span class="act">（看菜單）</span>一人一份套餐……</p>
-<p><span class="who">阿嬤</span><span class="act">（看價錢）</span>一份這麼多錢？好貴喔。</p>
-<p><span class="who">小瑜</span>阿嬤……</p>
-<p><span class="who">阿嬤</span>我沒有嫌，我是在算。</p>
-<p class="dir">［假裝上菜，大家作勢吃。］</p>
-<p><span class="who">阿嬤</span><span class="act">（看盤子）</span>這麼少？這是給貓吃的喔？</p>
-<p><span class="who">阿明</span>媽，這叫精緻。</p>
-<p><span class="who">阿嬤</span>精緻就是少。<span class="act">（夾一口）</span>又沒有菜，都是肉，不營養。</p>
-<p><span class="who">淑芬</span><span class="act">（忍著）</span>媽，很好吃啊。</p>
-<p><span class="who">阿嬤</span><span class="act">（再吃一口，停一下）</span>……沒有我煮的好吃。</p>
-<p><span class="who">小瑜</span>阿嬤！妳什麼都嫌，那妳來幹嘛？</p>
-<p class="dir">［安靜。］</p>
-<p><span class="who">阿明</span>小瑜，講話客氣一點。</p>
-<p><span class="who">小瑜</span><span class="act">（低頭）</span>……對不起。</p>
-<p><span class="who">阿嬤</span><span class="act">（慢慢說）</span>我煮了四十年，你們以前每個禮拜天都回來吃。現在一年吃不到幾次。<span class="act">（看著盤子）</span>這個是不錯啦……就是沒有人跟我說想吃什麼了。</p>
-<p class="dir">［淑芬放下筷子看阿嬤，阿明看淑芬，小瑜看著盤子。］</p>
-<p><span class="who">小瑜</span><span class="act">（小聲）</span>阿嬤，回去我要吃妳的滷肉。</p>
-<p><span class="who">阿嬤</span>好貴喔，豬肉漲價了。<span class="act">（停）</span>……煮啦。</p>
-<p class="dir">［燈暗］</p>
+<div class="block"><b>走位</b>淑芬站起來，手裡抓著伴手禮紙袋，這是她第一次站。阿明起身退到中央。小瑜往床的方向走。</div>
+<p><span class="who">淑芬</span>那這個呢？我買給同事的。</p>
+<p><span class="who">阿嬤</span>那個就不用啊。餅乾，台灣也有。</p>
+<p><span class="who">淑芬</span><span class="act">（咬住）</span>……媽，那是伴手禮。</p>
+<p><span class="who">阿嬤</span>你們就是這樣，看到什麼都要買。老街那天，小瑜要買那個布娃娃，一個三千塊日幣，摸一摸就好了，買回去也是放著。</p>
+<p><span class="who">小瑜</span>那是御守！可以保平安的！我查過那間神社——</p>
+<p><span class="who">阿嬤</span>御守一個三千，三千我在市場可以買三天的菜。</p>
+<p><span class="who">小瑜</span><span class="act">（又往床走一步，站到阿嬤正前方）</span>阿嬤，妳知道我為了這趟查了多久嗎？三個月。每一間店、每一班車、每一間廁所在哪我都查了。妳從第一天嫌到現在。</p>
+<p><span class="who">阿嬤</span>我哪有嫌。</p>
+<p><span class="who">小瑜</span>「這個不用」、「那個太貴」、「這個不營養」、「不如我煮的」。小吃攤那碗拉麵妳說一千二太貴，妳自己點了一碗白飯！</p>
+<p><span class="who">阿嬤</span><span class="act">（也大聲）</span>白飯才是正常的價錢！</p>
+<p><span class="who">阿明</span><span class="act">（走進來，站到小瑜和阿嬤中間，背對阿嬤）</span>好了好了，大家都累了。</p>
+<p><span class="who">淑芬</span><span class="act">（小聲，但每個字都清楚）</span>阿明，你每次都這句。</p>
+<p><span class="who">阿明</span><span class="act">（轉頭）</span>……蛤？</p>
+<p><span class="who">淑芬</span>「好了好了」。她講我的時候你好了好了，我講她的時候你也好了好了。</p>
+<div class="block"><b>演法</b>這段的節奏是「往上疊」：淑芬、小瑜、阿嬤三個人輪流接話，一句比一句快，到「白飯才是正常的價錢」是第一個頂點。阿明第二次擋人，比第一次慢半拍。淑芬那句「你每次都這句」要把衝突的方向轉開，從祖孫變成夫妻，阿明被打中的那個「蛤」是全場最尷尬的一拍，不要搶著接。</div>
 </div>
 
-<h3>幕 5　收行李 <small>飯店房間 · 約 2 分鐘 · 阿嬤與媳婦</small></h3>
+<h3>第四段　爆發 <small>4:30–5:30</small></h3>
 <div class="script">
-<p class="dir">［地上攤滿袋子：米、小物。阿明跪著壓行李箱，淑芬拿磅秤。］</p>
-<p><span class="who">淑芬</span><span class="act">（看磅秤）</span>超重六公斤。超重一公斤要加好幾百。</p>
-<p><span class="who">阿嬤</span>好貴喔，那你們衣服少帶幾件。</p>
-<p><span class="who">淑芬</span><span class="act">（咬牙）</span>媽，衣服是要穿的。</p>
-<p><span class="who">阿嬤</span>米也是要吃的！</p>
-<p><span class="who">阿明</span>不然……我的鞋子不要帶好了。</p>
-<p><span class="who">小瑜</span><span class="act">（爆發）</span>夠了！阿嬤妳從第一天嫌到最後一天！我們不能買、不能吃、不能拍照，然後妳自己買四包米！我查三個月的行程，妳有哪一天開心過？</p>
-<p><span class="who">阿明</span><span class="act">（站起來）</span>小瑜！妳怎麼跟阿嬤講話的！她腳還在痛！</p>
-<p><span class="who">小瑜</span>腳痛？<span class="act">（看阿嬤的腳）</span>什麼時候的事？為什麼沒人跟我說？</p>
-<p><span class="who">阿嬤</span><span class="act">（低頭）</span>……我叫阿明不要講。</p>
-<p><span class="who">淑芬</span><span class="act">（聲音發抖）</span>媽。我忍了五天。小瑜查三個月，我跟阿明加班一年存這趟錢。妳嫌貴、嫌少、嫌不好吃，連腳受傷都不跟我們講。妳是不是覺得我們做什麼都不夠好？</p>
-<p class="dir">［安靜。阿明僵住不敢動。］</p>
-<p><span class="who">阿嬤</span><span class="act">（很久）</span>……不是。</p>
-<p class="dir">［阿嬤慢慢從行李箱底下拉出不透明袋子，倒出三個小物，一個一個推過去。］</p>
-<p><span class="who">阿嬤</span>這個，妳放辦公室的。這個，阿明給同事的。這個……<span class="act">（推給小瑜）</span>這裡限定的，台灣真的沒有。</p>
-<p><span class="who">小瑜</span><span class="act">（愣住）</span>阿嬤……妳那天……</p>
-<p><span class="who">阿嬤</span>我不會講好聽話，我只會算。我沒賺錢了，怕你們為了我花錢，所以我自己買。<span class="act">（看淑芬）</span>妳做的我都有看到。我不是嫌你們，我是嫌我自己沒用。</p>
-<p><span class="who">淑芬</span><span class="act">（蹲下，手搭在阿嬤膝蓋上）</span>媽，妳在，就不是沒用。</p>
-<p><span class="who">阿明</span><span class="act">（終於敢動）</span>那……米還是超重。</p>
-<p><span class="who">阿嬤</span>那你鞋子不要帶。</p>
-<p><span class="who">阿明</span>媽！</p>
-<p class="dir">［全家笑。］</p>
-<p><span class="who">小瑜</span><span class="act">（舉右手）</span>好，最後一次宣誓。跟我唸：下次……</p>
-<p><span class="who">阿嬤</span>下次早點出門，才能逛久一點。</p>
-<p><span class="who">小瑜</span>咦？</p>
-<p><span class="who">阿嬤</span>怎樣，我不能說喔？好貴喔……但值得。</p>
-<p><span class="who">淑芬</span><span class="act">（接）</span>好貴喔。</p>
-<p><span class="who">阿明</span>好貴喔。</p>
-<p><span class="who">小瑜</span><span class="act">（笑）</span>好貴喔！</p>
-<p class="dir">［全家擠在一起拍合照，阿嬤站中間。燈暗］</p>
+<div class="block"><b>走位</b>淑芬放下紙袋，走到中央，第一次正面站在阿嬤前面。小瑜站她旁邊。阿明退到行李箱旁，不再在中間。</div>
+<p><span class="who">淑芬</span>媽，這趟我有講過一句話嗎？老街妳不讓買，我沒講。妳硬要扛米，阿明要幫妳拿，妳說「我自己會」，結果扭到腳，是誰半夜去找藥局？我沒講。超重五公斤要補多少錢，妳知道嗎？</p>
+<p><span class="who">阿嬤</span><span class="act">（停一拍）</span>……我出。</p>
+<p><span class="who">淑芬</span>不是錢的問題！</p>
+<p><span class="who">小瑜</span>對，不是錢！是妳從來不覺得我們做的事情有一件是對的！</p>
+<p class="dir">（阿明看淑芬，又看小瑜，往後退了半步。這次他沒有說「好了」。）</p>
+<p class="dir">（停頓。阿嬤看著面前兩個人，沒有回嘴。她雙手撐著床沿站起來，右腳一跛。）</p>
+<p><span class="who">阿明</span>媽，妳坐著——</p>
+<p><span class="who">阿嬤</span><span class="act">（揮手）</span>不用扶。</p>
+<p class="dir">（阿嬤一跛一跛走到桌子旁。三個人都看著她。她把最上面那包米袋拖到地上，扶著桌緣慢慢跪下去，一手按地，打開袋口。）</p>
+<div class="block"><b>演法</b>淑芬的爆發不是吼，是一口氣講完，中間不換氣，講到「妳知道嗎」才停。阿嬤的「我出」是她唯一會的回應方式，用錢；淑芬的「不是錢的問題」要像被這兩個字刺到。阿嬤站起來到跪下去這段沒有台詞，大約十五秒，不要趕，讓觀眾看她的腳。</div>
 </div>
 
-<h2 id="notes">演出提醒</h2>
+<h3>第五段　米袋 <small>5:30–7:00</small></h3>
+<div class="script">
+<div class="block"><b>走位</b>阿嬤跪在桌旁的地上。小瑜、淑芬站中央，阿明站行李箱旁。之後三個人一個一個被拉過去。</div>
+<p class="dir">（阿嬤從米袋裡掏出一個御守，手伸直，遞向小瑜的方向，眼睛沒看她。小瑜不動。）</p>
+<p><span class="who">阿嬤</span>那個三千塊的。神社關門前買的。</p>
+<p class="dir">（再掏出一個小陶碗，放在地上，往淑芬的方向推。）</p>
+<p><span class="who">阿嬤</span>妳在那家店門口站了兩次。第一次我說不用，第二次妳又自己回去看。</p>
+<p class="dir">（再掏出一小瓶清酒，放在地上。）</p>
+<p><span class="who">阿嬤</span>你的。你不敢買，怕我念。</p>
+<p class="dir">（三個人都沒動。）</p>
+<p><span class="who">阿嬤</span>我不會講好聽話。看到價錢我頭就痛。可是你們看了兩次的東西，我記得。</p>
+<p class="dir">（小瑜先走過去，跪在阿嬤旁邊，拿起御守。）</p>
+<p><span class="who">小瑜</span>……妳扭到腳，就是因為扛這包？</p>
+<p><span class="who">阿嬤</span>這包最重。</p>
+<p class="dir">（淑芬走過去，蹲下來，拿起碗，看了很久。）</p>
+<p><span class="who">淑芬</span>媽，這個……妳怎麼知道是這個？</p>
+<p><span class="who">阿嬤</span>妳拿起來又放下，三次。我數的。</p>
+<p class="dir">（淑芬笑出來，眼眶紅。）</p>
+<p><span class="who">阿明</span><span class="act">（還站在原地，拿著清酒）</span>所以……米也是——</p>
+<p><span class="who">阿嬤</span>米是真的要帶回去。這米煮起來比較 Q。</p>
+<p class="dir">（全部人笑出來。阿明走過去，蹲在三個人後面。四個人第一次聚在同一個角落。）</p>
+<div class="block"><b>演法</b>阿嬤講這三件禮物的時候眼睛不看人，看地上或看米袋，她不會對著人講這種話。小瑜跪下去是全場第一次有人主動靠近阿嬤，動作要輕。淑芬的「妳怎麼知道」要問得像真的不敢相信。「煮起來比較 Q」要用前面吵架一模一樣的語氣講，笑點就在她完全沒變。</div>
+</div>
+
+<h3>第六段　收尾 <small>7:00–7:30</small></h3>
+<div class="script">
+<div class="block"><b>走位</b>四個人都在桌旁，阿嬤跪，小瑜跪，淑芬蹲，阿明蹲在後面。</div>
+<p><span class="who">小瑜</span><span class="act">（站起來，舉手）</span>那重新宣誓。明天回家路上，不吵架！</p>
+<p class="dir">（阿明舉手。淑芬舉手。阿嬤還跪著，抬頭看三個人，慢慢舉起手。）</p>
+<p><span class="who">阿嬤</span><span class="act">（小聲）</span>……好啦。</p>
+<p><span class="who">小瑜</span><span class="act">（伸手扶阿嬤起來，阿嬤這次沒有拒絕）</span>阿嬤，那超重的錢——</p>
+<p><span class="who">阿嬤</span>我出。</p>
+<p><span class="who">淑芬</span>媽，妳不是說什麼都不要買？</p>
+<p><span class="who">阿嬤</span>我是說「你們」不要買。</p>
+<p class="dir">（淑芬和小瑜同時倒抽一口氣，阿明大笑。）</p>
+<p><span class="who">阿明</span><span class="act">（彎腰又去抱米）</span>那明天我扛。</p>
+<p class="dir">（阿嬤被小瑜扶回床沿坐下，看著攤開的行李箱。）</p>
+<p><span class="who">阿嬤</span>早知道這麼好玩……</p>
+<p><span class="who">小瑜</span>早知道什麼？</p>
+<p><span class="who">阿嬤</span>早知道，就早一點跟你們出門了。</p>
+<p class="dir">（燈暗。）</p>
+<div class="block"><b>演法</b>最後的舉手要和開場完全一樣的隊形，只差阿嬤這次舉了。「我是說你們不要買」是全劇最大的笑點，阿嬤要講得理直氣壯。最後一句台詞輕輕講，不要加重，講完三個人看她，燈再暗。</div>
+</div>
+
+<h2 id="notes">排練提示</h2>
+<p class="lead">整齣戲的骨架是「三次擋、兩次舉手」：阿明擋三次，一次比一次慢，第四次沒擋；全家舉手兩次，第一次阿嬤沒舉，第二次舉了。排練時先把這五個點定位，其他台詞自然會歸位。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>演員</th><th>要抓的一件事</th><th>最容易演壞的地方</th></tr></thead>
+  <tbody>
+    <tr><td class="n">凱莉（阿嬤）</td><td>全場語氣不變，嫌東西和送禮物都用同一種平淡的講法</td><td>第五段講禮物時變溫柔。不行，她就是不會講好聽話，溫度要靠動作和眼神，不靠聲音</td></tr>
+    <tr><td class="n">冠豪（阿明）</td><td>身體永遠在兩個人中間，手上永遠有東西</td><td>第四段退半步那一下。那是他第一次放棄和事，要讓觀眾看到他「想講好了好了但吐不出來」</td></tr>
+    <tr><td class="n">雅典娜（淑芬）</td><td>前半段的忍要讓觀眾看得到：摺衣服的手越來越用力</td><td>第四段爆發變成哭戲。她是氣，不是委屈，眼眶紅要留到第五段拿到碗那一刻</td></tr>
+    <tr><td class="n">鈺庭（小瑜）</td><td>節奏最快的人，高音量、高能量</td><td>第五段跪下去還在用前面的能量。那句「妳扭到腳就是因為扛這包？」要是全場她最小聲的一句</td></tr>
+  </tbody>
+</table>
+</div>
 <ul>
-  <li><strong>三句宣誓是全劇的骨架</strong>：幕 1 立下「不吵架、不嫌貴、有事說出來」，幕 2 破「不嫌貴」，幕 4 破「不吵架」，幕 5 破「有事說出來」，最後由阿嬤自己完成第三句。</li>
-  <li><strong>幕 3 是唯一沒有人吵架的一幕</strong>：只有阿嬤和阿明，先讓觀眾看到阿嬤柔軟的一面，幕 5 的揭露才不突兀。</li>
-  <li><strong>腳傷分兩層揭露</strong>：幕 4 用「腳墊高、阿明偷看」默默帶過，幕 5 小瑜才發現，製造第二層衝擊。</li>
-  <li><strong>口頭禪前刺後暖</strong>：「好貴喔」在幕 1 到幕 4 是刺，幕 5 最後一輪變成全家的笑話，演阿嬤的人要刻意換語氣。</li>
-  <li><strong>揭露靠物件</strong>：不透明袋子裡的三個小物要讓觀眾看得清楚，是誰想買的就推給誰，不要只靠台詞解釋。</li>
+  <li><strong>時間控制</strong>：每段標題都有預計時間，全長約 7 分半。超過 8 分鐘就先刪第三段「拉麵與白飯」那兩句；不到 6 分鐘就拉長第四段阿嬤走到桌子旁的無聲段，那段越慢越好。</li>
+  <li><strong>道具注意</strong>：裝禮物的那包米袋放在桌上最上面，袋口事先鬆開，阿嬤拖到地上後跪著一手就要能打開。御守、陶碗、清酒依掏出的順序由上往下疊。阿嬤拖米袋前先確認桌子穩，跪下時是扶桌緣，不是把重量壓在桌上。</li>
 </ul>
 
 <h2 id="art">角色圖</h2>
@@ -281,17 +440,17 @@
 <div class="grid">
   <figure>
     <img src="images/page1.png" alt="v1 分鏡參考圖：伴手禮店" loading="lazy">
-    <figcaption>v1 參考圖：伴手禮店（對應幕 2）</figcaption>
+    <figcaption>v1 參考圖：伴手禮店（對應第三段翻舊帳講到的老街）</figcaption>
   </figure>
   <figure>
     <img src="images/page2.png" alt="v1 分鏡參考圖：飯店收行李與合照" loading="lazy">
-    <figcaption>v1 參考圖：飯店收行李與合照（對應幕 5）</figcaption>
+    <figcaption>v1 參考圖：飯店收行李（v3 整齣戲的場景）</figcaption>
   </figure>
 </div>
 
 <footer>
-  <div>版本 v2.0 · 更新時間 2026-10-11 21:20</div>
-  <div>版本紀錄：v1.0（2026-10-10 22:05）首版上線，十二格兩段式分鏡；v1.1（2026-10-10 22:19）加入版號與更新時間；v2.0（2026-10-11 21:20）改為五幕結構，新增劇組介紹與完整台詞。</div>
+  <div>版本 v3.0 · 更新時間 2026-10-13 13:40</div>
+  <div>版本紀錄：v1.0（2026-10-10 22:05）首版上線，十二格兩段式分鏡；v1.1（2026-10-10 22:19）加入版號與更新時間；v2.0（2026-10-11 21:20）改為五幕結構，新增劇組介紹與完整台詞；v3.0（2026-10-13 13:40）改為飯店房間單一場景六段式，新增角色動機、關係與衝突圖、舞台走位圖、站坐跪姿式、演法提示，以及配合現場一桌兩椅的服裝與道具清單。</div>
   原始圖片來源：
   <a href="https://chatgpt.com/s/m_6aca4094f14081919fb01f4ae2fa1175">角色設定圖</a>、
   <a href="https://chatgpt.com/s/m_6aca40a352a4819182b20a66184a6297">第一頁</a>、

@@ -75,14 +75,9 @@
   }
   .block b { color: var(--accent); margin-right: 6px; }
   figure { margin: 20px 0 28px; }
-  figure img {
-    display: block; width: 100%; height: auto; border-radius: 8px;
-    border: 1px solid var(--line); background: var(--paper);
-  }
   figure svg { display: block; width: 100%; height: auto; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; }
   figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 720px) { .grid, .cast { grid-template-columns: 1fr; } h1 { font-size: 1.6rem; } }
+  @media (max-width: 720px) { .cast { grid-template-columns: 1fr; } h1 { font-size: 1.6rem; } }
   nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; font-size: 0.95rem; }
   nav a { color: var(--accent); text-decoration: none; }
   nav a:hover { text-decoration: underline; }
@@ -96,7 +91,7 @@
 <header>
   <h1>家族旅遊短劇：早知道就出門了</h1>
   <div class="byline">四人演出 · 約 7 分半 · 單一場景 · 六段</div>
-  <div class="byline version">版本 v3.0 · 更新時間 2026-10-13 13:40</div>
+  <div class="byline version">版本 v3.1 · 更新時間 2026-10-13 13:46</div>
   <nav>
     <a href="#intro">劇組介紹</a>
     <a href="#adapt">改編說明</a>
@@ -107,7 +102,6 @@
     <a href="#costume">服裝與道具</a>
     <a href="#script">完整劇本</a>
     <a href="#notes">排練提示</a>
-    <a href="#art">角色圖</a>
   </nav>
 </header>
 
@@ -431,30 +425,9 @@
   <li><strong>道具注意</strong>：裝禮物的那包米袋放在桌上最上面，袋口事先鬆開，阿嬤拖到地上後跪著一手就要能打開。御守、陶碗、清酒依掏出的順序由上往下疊。阿嬤拖米袋前先確認桌子穩，跪下時是扶桌緣，不是把重量壓在桌上。</li>
 </ul>
 
-<h2 id="art">角色圖</h2>
-<p>角色設定圖由 ChatGPT 生成。下面兩張六格漫畫是 v1 的十二格分鏡版本，角色與氛圍相同，可當排練時的視覺參考。</p>
-<figure>
-  <img src="images/character_sheet.png" alt="角色設定圖：阿嬤、爸爸阿明、媽媽淑芬、小瑜" loading="lazy">
-  <figcaption>角色設定圖（由左至右：阿嬤金花、爸爸阿明、媽媽淑芬、孫女小瑜）</figcaption>
-</figure>
-<div class="grid">
-  <figure>
-    <img src="images/page1.png" alt="v1 分鏡參考圖：伴手禮店" loading="lazy">
-    <figcaption>v1 參考圖：伴手禮店（對應第三段翻舊帳講到的老街）</figcaption>
-  </figure>
-  <figure>
-    <img src="images/page2.png" alt="v1 分鏡參考圖：飯店收行李與合照" loading="lazy">
-    <figcaption>v1 參考圖：飯店收行李（v3 整齣戲的場景）</figcaption>
-  </figure>
-</div>
-
 <footer>
-  <div>版本 v3.0 · 更新時間 2026-10-13 13:40</div>
-  <div>版本紀錄：v1.0（2026-10-10 22:05）首版上線，十二格兩段式分鏡；v1.1（2026-10-10 22:19）加入版號與更新時間；v2.0（2026-10-11 21:20）改為五幕結構，新增劇組介紹與完整台詞；v3.0（2026-10-13 13:40）改為飯店房間單一場景六段式，新增角色動機、關係與衝突圖、舞台走位圖、站坐跪姿式、演法提示，以及配合現場一桌兩椅的服裝與道具清單。</div>
-  原始圖片來源：
-  <a href="https://chatgpt.com/s/m_6aca4094f14081919fb01f4ae2fa1175">角色設定圖</a>、
-  <a href="https://chatgpt.com/s/m_6aca40a352a4819182b20a66184a6297">第一頁</a>、
-  <a href="https://chatgpt.com/s/m_6aca40af071881918c5d04e17353fbb8">第二頁</a>
+  <div>版本 v3.1 · 更新時間 2026-10-13 13:46</div>
+  <div>版本紀錄：v1.0（2026-10-10 22:05）首版上線，十二格兩段式分鏡；v1.1（2026-10-10 22:19）加入版號與更新時間；v2.0（2026-10-11 21:20）改為五幕結構，新增劇組介紹與完整台詞；v3.0（2026-10-13 13:40）改為飯店房間單一場景六段式，新增角色動機、關係與衝突圖、舞台走位圖、站坐跪姿式、演法提示，以及配合現場一桌兩椅的服裝與道具清單；v3.1（2026-10-13 13:46）移除與新版劇本不符的角色圖與 v1 分鏡圖。</div>
 </footer>
 </main>
 </body>

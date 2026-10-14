@@ -29,7 +29,7 @@ html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body {
   margin: 0; color: #111; background: #fff;
   font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-  font-size: 11pt; line-height: 1.55;
+  font-size: 11pt; line-height: 1.5;
 }
 .cover { border: 1.5pt solid #111; border-radius: 6pt; padding: 10pt 14pt; margin-bottom: 14pt; }
 .cover h1 { font-size: 18pt; margin: 0 0 2pt; }
@@ -43,8 +43,11 @@ h3 small { font-weight: normal; font-size: 10pt; color: #555; margin-left: 6pt; 
 .script .who { font-weight: 700; margin-right: 6pt; }
 .script .act { color: #555; }
 .script .dir { color: #555; }
-.block { border-left: 2.5pt solid #999; padding: 3pt 8pt; margin: 6pt 0; font-size: 10pt; color: #333; break-inside: avoid; }
+.block { border-left: 2.5pt solid #999; padding: 2pt 8pt; margin: 5pt 0; font-size: 9.5pt; color: #333; break-inside: avoid; }
 .block b { margin-right: 6pt; color: #111; }
+.mood ul { list-style: none; margin: 2pt 0 0; padding: 0; }
+.mood li { margin: 0; }
+.mood li.mine-mood { color: #111; font-weight: 600; }
 p.mine .who { font-size: 12pt; }
 p.mine .say { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5pt; text-underline-offset: 3pt; }
 """
@@ -69,6 +72,7 @@ def mark_lines(text, role):
 
 def render(script, version, role, label, actor):
     marked = mark_lines(script, role)
+    marked = marked.replace("<li><b>" + role + "</b>", '<li class="mine-mood"><b>' + role + "</b>")
     count = marked.count('<p class="mine">')
     title = "早知道就出門了 · " + label + "台詞本"
     page = (

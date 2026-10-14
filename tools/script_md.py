@@ -17,6 +17,8 @@ LINE_HTML = re.compile(r'^<p><span class="who">(?P<who>[^<]+)</span>(?P<body>.*)
 ACT_HTML = re.compile(r'<span class="act">([^<]*)</span>')
 INTRO_HTML = re.compile(r'^<p>(?P<text>.*)</p>$')
 TITLE_HTML = re.compile(r'^<h2 id="script">(?P<text>[^<]+)</h2>$')
+MOOD_HTML = re.compile(r'^<div class="block mood"><b>情緒</b><ul>(?P<items>.*)</ul></div>$')
+MOOD_ITEM_HTML = re.compile(r'<li><b>(?P<who>[^<]+)</b>(?P<text>.*?)</li>')
 
 TITLE_MD = re.compile(r'^# (?P<text>.+)$')
 HEADING_MD = re.compile(r'^## (?P<title>.+) (?P<time>\d+:\d\d–\d+:\d\d)$')
@@ -24,6 +26,8 @@ BLOCK_MD = re.compile(r'^> (?P<kind>走位|演法)：(?P<text>.*)$')
 DIR_MD = re.compile(r'^（.*）$')
 LINE_MD = re.compile(r'^(?P<who>' + "|".join(ACTORS) + r')：(?P<body>.+)$')
 ACT_MD = re.compile(r'（[^（）]*）')
+MOOD_MD = re.compile(r'^> 情緒：$')
+MOOD_ITEM_MD = re.compile(r'^> - (?P<who>' + "|".join(ACTORS) + r')：(?P<text>.+)$')
 
 
 def export_markdown(page):
@@ -37,6 +41,9 @@ def export_markdown(page):
             out.append("# " + match["text"])
         elif match := HEADING_HTML.match(line):
             out.append("## " + match["title"] + " " + match["time"])
+        elif match := MOOD_HTML.match(line):
+            items = ["> - " + item["who"] + "：" + item["text"] for item in MOOD_ITEM_HTML.finditer(match["items"])]
+            out.append("\n".join(["> 情緒："] + items))
         elif match := BLOCK_HTML.match(line):
             out.append("> " + match["kind"] + "：" + match["text"])
         elif match := DIR_HTML.match(line):
@@ -50,14 +57,29 @@ def export_markdown(page):
     return "\n\n".join(out) + "\n"
 
 
+def mood_block(items):
+    return '<div class="block mood"><b>情緒</b><ul>' + "".join("<li><b>" + who + "</b>" + text + "</li>" for who, text in items) + "</ul></div>"
+
+
 def build_section(markdown):
     out = []
     in_scene = False
+    mood = None
     for number, raw in enumerate(markdown.split("\n"), 1):
         line = raw.strip()
         if not line:
             continue
-        if match := HEADING_MD.match(line):
+        if match := MOOD_ITEM_MD.match(line):
+            if mood is None:
+                raise ValueError("劇本.md 第 %d 行前面少了「> 情緒：」：%s" % (number, line))
+            mood.append((match["who"], match["text"]))
+            continue
+        if mood:
+            out.append(mood_block(mood))
+        mood = None
+        if MOOD_MD.match(line):
+            mood = []
+        elif match := HEADING_MD.match(line):
             if in_scene:
                 out.append("</div>\n")
             out.append("<h3>" + match["title"] + " <small>" + match["time"] + "</small></h3>")
@@ -77,6 +99,8 @@ def build_section(markdown):
             out.append("<p>" + line + "</p>\n")
         else:
             raise ValueError("劇本.md 第 %d 行看不懂：%s" % (number, line))
+    if mood:
+        out.append(mood_block(mood))
     if in_scene:
         out.append("</div>\n")
     return "\n".join(out) + "\n"

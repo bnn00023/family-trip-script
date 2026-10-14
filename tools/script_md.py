@@ -66,7 +66,8 @@ def build_section(markdown):
         elif match := TITLE_MD.match(line):
             out.append(START + match["text"] + "</h2>")
         elif match := BLOCK_MD.match(line):
-            out.append('<div class="block"><b>' + match["kind"] + "</b>" + match["text"] + "</div>")
+            if match["text"].strip():
+                out.append('<div class="block"><b>' + match["kind"] + "</b>" + match["text"] + "</div>")
         elif DIR_MD.match(line):
             out.append('<p class="dir">' + line + "</p>")
         elif match := LINE_MD.match(line):

@@ -24,3 +24,13 @@ python3 tools/make_sides.py
 ## 台詞本
 
 每個角色的台詞本 PDF 在 sides/ 資料夾，自己的台詞加粗並畫底線，可直接列印：阿嬤 amah.pdf、阿明 aming.pdf、淑芬 shufen.pdf、小瑜 xiaoyu.pdf。
+
+## 走位圖
+
+`blocking/` 裡是每一段的走位圖：`scene-1.png` 到 `scene-6.png` 各一段，`overview.png` 是全劇軌跡與空白總覽，`blocking.pdf` 把七張合成 A4 橫式可列印。斜線區是那一段沒有人走到的地板。
+
+走位座標寫在 `tools/make_blocking.py` 的 `SCENES`，不會跟著 `劇本.md` 自動更新。改了走位就同步改那裡，再執行：
+
+```sh
+python3 tools/make_blocking.py
+```

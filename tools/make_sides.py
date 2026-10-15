@@ -23,6 +23,11 @@ LINE = re.compile(r'<p><span class="who">(?P<who>[^<]+)</span>(?P<body>.*?)</p>'
 STAGE_SPAN = re.compile(r'(<span class="(?:who|act)">[^<]*</span>)')
 HEADING = re.compile(r'<h3>[^<]*<small>[^<]*</small></h3>')
 MOOD = re.compile(r'<div class="block mood"><b>情緒</b><ul>(?P<items>.*?)</ul></div>', re.S)
+ACTING = re.compile(r'<div class="block"><b>演法</b>.*?</div>\s*', re.S)
+PARAGRAPH = re.compile(r'<p(?: class="[^"]*")?>(?P<body>.*?)</p>', re.S)
+WHO = re.compile(r'^<span class="who">(?P<who>[^<]+)</span>')
+CUE_TAIL = re.compile(r'[^。！？]+[。！？]*\s*$')
+CUE_MAX = 16
 
 CSS = """
 @page {
@@ -53,6 +58,7 @@ h3 small { font-weight: normal; font-size: 10pt; color: #555; margin-left: 6pt; 
 .block b { margin-right: 6pt; color: #111; }
 p.mine .who { font-size: 12pt; }
 p.mine .say { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5pt; text-underline-offset: 3pt; }
+.cue { font-weight: 700; }
 figure.stage { float: right; width: 52%%; margin: 0 0 4pt 10pt; break-inside: avoid; }
 figure.stage svg { display: block; width: 100%%; height: auto; }
 figure.stage figcaption { font-size: 8pt; line-height: 1.3; color: #666; margin-top: 2pt; }
@@ -84,6 +90,46 @@ def keep_own_mood(text, role):
     return MOOD.sub(replace, text)
 
 
+def drop_acting_notes(text):
+    return ACTING.sub("", text)
+
+
+def with_cue(body):
+    parts = STAGE_SPAN.split(body)
+    for index in range(len(parts) - 1, -1, -1):
+        part = parts[index]
+        if STAGE_SPAN.fullmatch(part) or not part.strip():
+            continue
+        cue = CUE_TAIL.search(part).group(0)
+        if len(cue) > CUE_MAX and "，" in cue:
+            cue = cue[cue.rindex("，") + 1:]
+        parts[index] = part[:-len(cue)] + '<span class="cue">' + cue + "</span>"
+        break
+    return "".join(parts)
+
+
+def mark_cues(text, role):
+    paragraphs = list(PARAGRAPH.finditer(text))
+    speakers = [WHO.match(match.group("body")) for match in paragraphs]
+    cued = set()
+    for index, speaker in enumerate(speakers):
+        if speaker is None or speaker.group("who") != role:
+            continue
+        previous = index - 1
+        while previous >= 0 and speakers[previous] is None:
+            previous -= 1
+        if previous >= 0 and speakers[previous].group("who") != role:
+            cued.add(previous)
+    pieces, position = [], 0
+    for index in sorted(cued):
+        match = paragraphs[index]
+        pieces.append(text[position:match.start("body")])
+        pieces.append(with_cue(match.group("body")))
+        position = match.end("body")
+    pieces.append(text[position:])
+    return "".join(pieces)
+
+
 def with_stage_figures(text, role, scenes):
     figures = iter(
         '<figure class="stage">' + make_blocking.focus_svg(pot, paths, role) +
@@ -97,7 +143,8 @@ def with_stage_figures(text, role, scenes):
 
 
 def render(script, version, role, label, actor, scenes):
-    marked = with_stage_figures(keep_own_mood(mark_lines(script, role), role), role, scenes)
+    marked = mark_cues(drop_acting_notes(keep_own_mood(mark_lines(script, role), role)), role)
+    marked = with_stage_figures(marked, role, scenes)
     count = marked.count('<p class="mine">')
     title = "早知道就出門了 · " + label + "台詞本"
     page = (
@@ -106,7 +153,7 @@ def render(script, version, role, label, actor, scenes):
         '<div class="cover"><h1>早知道就出門了</h1>'
         '<p class="role">' + label + "（" + actor + " 飾）台詞本</p>"
         '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · 約 8 分 · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
-        '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。（　）裡是動作，不用唸出來。每段標題右邊的圖是這段走位：深色是你，淡色是其他人。</p></div>'
+        '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。<span class="cue">只加粗、沒底線</span>＝你開口前對方的最後一句，聽到它就接。（　）裡是動作，不用唸出來。每段標題右邊的圖是這段走位：深色是你，淡色是其他人。</p></div>'
         + marked + "</body></html>"
     )
     return page, count

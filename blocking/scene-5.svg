@@ -184,16 +184,12 @@
 <rect x="340" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="110" width="20" height="20" fill="url(#blank)"/>
-<rect x="360" y="130" width="20" height="20" fill="url(#blank)"/>
-<rect x="360" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="110" width="20" height="20" fill="url(#blank)"/>
-<rect x="380" y="130" width="20" height="20" fill="url(#blank)"/>
-<rect x="380" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="390" width="20" height="20" fill="url(#blank)"/>
@@ -201,9 +197,6 @@
 <rect x="400" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="130" width="20" height="20" fill="url(#blank)"/>
-<rect x="400" y="150" width="20" height="20" fill="url(#blank)"/>
-<rect x="400" y="170" width="20" height="20" fill="url(#blank)"/>
-<rect x="400" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="410" width="20" height="20" fill="url(#blank)"/>
@@ -211,17 +204,22 @@
 <rect x="420" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="130" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="150" width="20" height="20" fill="url(#blank)"/>
+<rect x="420" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="130" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="150" width="20" height="20" fill="url(#blank)"/>
+<rect x="440" y="170" width="20" height="20" fill="url(#blank)"/>
+<rect x="440" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="130" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="170" width="20" height="20" fill="url(#blank)"/>
+<rect x="460" y="190" width="20" height="20" fill="url(#blank)"/>
+<rect x="460" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="110" width="20" height="20" fill="url(#blank)"/>
@@ -229,6 +227,8 @@
 <rect x="480" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="170" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="190" width="20" height="20" fill="url(#blank)"/>
+<rect x="480" y="210" width="20" height="20" fill="url(#blank)"/>
+<rect x="480" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="110" width="20" height="20" fill="url(#blank)"/>
@@ -421,19 +421,19 @@
 <line x1="215" y1="298" x2="512.0" y2="303.6" stroke="#2f6fd0" stroke-width="2.5" marker-end="url(#arrow-明)"/>
 <circle cx="373.5" cy="301.0" r="9" fill="#fff" stroke="#2f6fd0"/>
 <text x="373.5" y="305.0" text-anchor="middle" font-size="12" fill="#2f6fd0">④</text>
-<line x1="368" y1="222" x2="562.5" y2="381.3" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#arrow-芬)"/>
-<circle cx="473.0" cy="308.0" r="9" fill="#fff" stroke="#2e8b57"/>
-<text x="473.0" y="312.0" text-anchor="middle" font-size="12" fill="#2e8b57">③</text>
-<line x1="440" y1="230" x2="467.8" y2="358.5" stroke="#c98a00" stroke-width="2.5" marker-end="url(#arrow-瑜)"/>
-<circle cx="456.0" cy="304.0" r="9" fill="#fff" stroke="#c98a00"/>
-<text x="456.0" y="308.0" text-anchor="middle" font-size="12" fill="#c98a00">②</text><circle cx="520" cy="362" r="17" fill="#b5543c" stroke="#fff" stroke-width="2"/><text x="520" y="367" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">嬤</text><rect x="530" y="371" width="22" height="16" rx="8" fill="#fff" stroke="#b5543c"/><text x="541" y="383" text-anchor="middle" font-size="11" fill="#b5543c">跪</text>
+<line x1="372" y1="186" x2="563.9" y2="379.8" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#arrow-芬)"/>
+<circle cx="475.0" cy="290.0" r="9" fill="#fff" stroke="#2e8b57"/>
+<text x="475.0" y="294.0" text-anchor="middle" font-size="12" fill="#2e8b57">③</text>
+<line x1="400" y1="232" x2="460.4" y2="342.5" stroke="#c98a00" stroke-width="2.5" marker-end="url(#arrow-瑜)"/>
+<circle cx="435.0" cy="296.0" r="9" fill="#fff" stroke="#c98a00"/>
+<text x="435.0" y="300.0" text-anchor="middle" font-size="12" fill="#c98a00">②</text><circle cx="520" cy="362" r="17" fill="#b5543c" stroke="#fff" stroke-width="2"/><text x="520" y="367" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">嬤</text><rect x="530" y="371" width="22" height="16" rx="8" fill="#fff" stroke="#b5543c"/><text x="541" y="383" text-anchor="middle" font-size="11" fill="#b5543c">跪</text>
 <circle cx="318" cy="182" r="15" fill="#fff" stroke="#2f6fd0" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="318" y="186" text-anchor="middle" font-size="13" fill="#2f6fd0" opacity="0.8">明</text>
 <circle cx="215" cy="298" r="15" fill="#fff" stroke="#2f6fd0" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="215" y="302" text-anchor="middle" font-size="13" fill="#2f6fd0" opacity="0.8">明</text>
 <circle cx="532" cy="304" r="17" fill="#2f6fd0" stroke="#fff" stroke-width="2"/><text x="532" y="309" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">明</text><rect x="542" y="313" width="22" height="16" rx="8" fill="#fff" stroke="#2f6fd0"/><text x="553" y="325" text-anchor="middle" font-size="11" fill="#2f6fd0">蹲</text>
-<circle cx="368" cy="222" r="15" fill="#fff" stroke="#2e8b57" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="368" y="226" text-anchor="middle" font-size="13" fill="#2e8b57" opacity="0.8">芬</text>
+<circle cx="372" cy="186" r="15" fill="#fff" stroke="#2e8b57" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="372" y="190" text-anchor="middle" font-size="13" fill="#2e8b57" opacity="0.8">芬</text>
 <circle cx="578" cy="394" r="17" fill="#2e8b57" stroke="#fff" stroke-width="2"/><text x="578" y="399" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">芬</text><rect x="588" y="403" width="22" height="16" rx="8" fill="#fff" stroke="#2e8b57"/><text x="599" y="415" text-anchor="middle" font-size="11" fill="#2e8b57">蹲</text>
-<circle cx="440" cy="230" r="15" fill="#fff" stroke="#c98a00" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="440" y="234" text-anchor="middle" font-size="13" fill="#c98a00" opacity="0.8">瑜</text>
-<circle cx="472" cy="378" r="17" fill="#c98a00" stroke="#fff" stroke-width="2"/><text x="472" y="383" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">瑜</text><rect x="482" y="387" width="22" height="16" rx="8" fill="#fff" stroke="#c98a00"/><text x="493" y="399" text-anchor="middle" font-size="11" fill="#c98a00">跪</text><text x="40" y="496" font-size="13" fill="#2f6fd0">① <tspan fill="#2b2622">阿明：走位：回到行李箱旁</tspan></text>
-<text x="40" y="518" font-size="13" fill="#c98a00">② <tspan fill="#2b2622">小瑜：走過去跪在阿嬤旁邊，拿起御守</tspan></text>
-<text x="40" y="540" font-size="13" fill="#2e8b57">③ <tspan fill="#2b2622">淑芬：走過去蹲下來，拿起陶碗</tspan></text>
-<text x="40" y="562" font-size="13" fill="#2f6fd0">④ <tspan fill="#2b2622">阿明：走過去蹲在後面，倒清酒敬淑芬</tspan></text><text x="40" y="602" font-size="11.5" fill="#6f655c">實心＝這段結束時的位置，虛線圈＝出發點，數字＝移動順序，右下小標是姿式。</text><text x="40" y="620" font-size="11.5" fill="#6f655c">斜線區＝這段沒有人到過的地板（離每個人與移動路線都超過約兩個身位）。</text></svg>
+<circle cx="400" cy="232" r="15" fill="#fff" stroke="#c98a00" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="400" y="236" text-anchor="middle" font-size="13" fill="#c98a00" opacity="0.8">瑜</text>
+<circle cx="470" cy="360" r="17" fill="#c98a00" stroke="#fff" stroke-width="2"/><text x="470" y="365" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">瑜</text><rect x="480" y="369" width="22" height="16" rx="8" fill="#fff" stroke="#c98a00"/><text x="491" y="381" text-anchor="middle" font-size="11" fill="#c98a00">跪</text><text x="40" y="496" font-size="13" fill="#2f6fd0">① <tspan fill="#2b2622">阿明：走位：回到行李箱旁</tspan></text>
+<text x="40" y="518" font-size="13" fill="#c98a00">② <tspan fill="#2b2622">小瑜：走過去跪在阿嬤左側，拿起御守</tspan></text>
+<text x="40" y="540" font-size="13" fill="#2e8b57">③ <tspan fill="#2b2622">淑芬：走過去蹲在阿嬤右側，側身，拿起陶碗</tspan></text>
+<text x="40" y="562" font-size="13" fill="#2f6fd0">④ <tspan fill="#2b2622">阿明：邊走邊說，蹲在後面，倒清酒敬淑芬</tspan></text><text x="40" y="602" font-size="11.5" fill="#6f655c">實心＝這段結束時的位置，虛線圈＝出發點，數字＝移動順序，右下小標是姿式。</text><text x="40" y="620" font-size="11.5" fill="#6f655c">斜線區＝這段沒有人到過的地板（離每個人與移動路線都超過約兩個身位）。</text></svg>

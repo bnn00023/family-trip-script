@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 724" width="800" height="724" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif"><defs><marker id="arrow-嬤" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b5543c"/></marker><marker id="arrow-明" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2f6fd0"/></marker><marker id="arrow-芬" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2e8b57"/></marker><marker id="arrow-瑜" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c98a00"/></marker><pattern id="blank" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f1ece4"/><line x1="0" y1="0" x2="0" y2="8" stroke="#d6cbbd" stroke-width="2"/></pattern></defs><rect width="100%" height="100%" fill="#faf6f0"/><text x="40" y="34" font-size="20" font-weight="700" fill="#2b2622">第四段　爆發 <tspan font-size="14" font-weight="400" fill="#6f655c">4:30–5:30</tspan></text><text x="760" y="34" text-anchor="end" font-size="13" fill="#6f655c">空白 68%</text><rect x="40" y="70" width="720" height="360" fill="#fffdf9" stroke="#9c9188" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 768" width="800" height="768" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif"><defs><marker id="arrow-嬤" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b5543c"/></marker><marker id="arrow-明" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2f6fd0"/></marker><marker id="arrow-芬" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2e8b57"/></marker><marker id="arrow-瑜" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c98a00"/></marker><pattern id="blank" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f1ece4"/><line x1="0" y1="0" x2="0" y2="8" stroke="#d6cbbd" stroke-width="2"/></pattern></defs><rect width="100%" height="100%" fill="#faf6f0"/><text x="40" y="34" font-size="20" font-weight="700" fill="#2b2622">第四段　爆發 <tspan font-size="14" font-weight="400" fill="#6f655c">4:30–5:30</tspan></text><text x="760" y="34" text-anchor="end" font-size="13" fill="#6f655c">空白 68%</text><rect x="40" y="70" width="720" height="360" fill="#fffdf9" stroke="#9c9188" stroke-width="1.5"/>
 <rect x="40" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="40" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="40" y="110" width="20" height="20" fill="url(#blank)"/>
@@ -92,7 +92,6 @@
 <rect x="160" y="170" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="190" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="210" width="20" height="20" fill="url(#blank)"/>
-<rect x="160" y="230" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="180" y="70" width="20" height="20" fill="url(#blank)"/>
@@ -155,6 +154,7 @@
 <rect x="300" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="110" width="20" height="20" fill="url(#blank)"/>
+<rect x="300" y="290" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="310" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="350" width="20" height="20" fill="url(#blank)"/>
@@ -171,6 +171,7 @@
 <rect x="320" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="320" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="70" width="20" height="20" fill="url(#blank)"/>
+<rect x="340" y="270" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="290" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="310" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="330" width="20" height="20" fill="url(#blank)"/>
@@ -178,6 +179,7 @@
 <rect x="340" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="410" width="20" height="20" fill="url(#blank)"/>
+<rect x="360" y="270" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="290" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="310" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="330" width="20" height="20" fill="url(#blank)"/>
@@ -185,7 +187,6 @@
 <rect x="360" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="410" width="20" height="20" fill="url(#blank)"/>
-<rect x="380" y="270" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="290" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="310" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="330" width="20" height="20" fill="url(#blank)"/>
@@ -193,7 +194,6 @@
 <rect x="380" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="410" width="20" height="20" fill="url(#blank)"/>
-<rect x="400" y="270" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="290" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="310" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="330" width="20" height="20" fill="url(#blank)"/>
@@ -425,28 +425,34 @@
 <rect x="40" y="440" width="720" height="22" rx="4" fill="#f3ebe1" stroke="#9c9188"/>
 <text x="400" y="456" text-anchor="middle" font-size="13" fill="#2b2622">觀眾席</text><circle cx="520" cy="404" r="9" fill="#3b3631"/><text x="520" y="407" text-anchor="middle" font-size="10" fill="#fff">鍋</text><line x1="390" y1="132" x2="390.0" y2="132.0" stroke="#b5543c" stroke-width="2.5" marker-end="url(#arrow-嬤)"/>
 <circle cx="360.0" cy="116.0" r="9" fill="#fff" stroke="#b5543c"/>
-<text x="360.0" y="120.0" text-anchor="middle" font-size="12" fill="#b5543c">⑤</text>
+<text x="360.0" y="120.0" text-anchor="middle" font-size="12" fill="#b5543c">⑥</text>
 <line x1="390" y1="140" x2="507.4" y2="284.5" stroke="#b5543c" stroke-width="2.5" marker-end="url(#arrow-嬤)"/>
 <circle cx="455.0" cy="220.0" r="9" fill="#fff" stroke="#b5543c"/>
-<text x="455.0" y="224.0" text-anchor="middle" font-size="12" fill="#b5543c">⑦</text>
+<text x="455.0" y="224.0" text-anchor="middle" font-size="12" fill="#b5543c">⑨</text>
 <line x1="520" y1="300" x2="520.0" y2="342.0" stroke="#b5543c" stroke-width="2.5" marker-end="url(#arrow-嬤)"/>
 <circle cx="520.0" cy="331.0" r="9" fill="#fff" stroke="#b5543c"/>
-<text x="520.0" y="335.0" text-anchor="middle" font-size="12" fill="#b5543c">⑧</text>
+<text x="520.0" y="335.0" text-anchor="middle" font-size="12" fill="#b5543c">⑩</text>
 <line x1="392" y1="168" x2="231.1" y2="286.2" stroke="#2f6fd0" stroke-width="2.5" marker-end="url(#arrow-明)"/>
 <circle cx="303.5" cy="233.0" r="9" fill="#fff" stroke="#2f6fd0"/>
 <text x="303.5" y="237.0" text-anchor="middle" font-size="12" fill="#2f6fd0">③</text>
 <line x1="215" y1="298" x2="211.4" y2="300.5" stroke="#2f6fd0" stroke-width="2.5" marker-end="url(#arrow-明)"/>
 <circle cx="165.0" cy="288.0" r="9" fill="#fff" stroke="#2f6fd0"/>
-<text x="165.0" y="292.0" text-anchor="middle" font-size="12" fill="#2f6fd0">④</text>
+<text x="165.0" y="292.0" text-anchor="middle" font-size="12" fill="#2f6fd0">⑤</text>
 <line x1="195" y1="312" x2="304.3" y2="196.5" stroke="#2f6fd0" stroke-width="2.5" marker-end="url(#arrow-明)"/>
 <circle cx="256.5" cy="247.0" r="9" fill="#fff" stroke="#2f6fd0"/>
-<text x="256.5" y="251.0" text-anchor="middle" font-size="12" fill="#2f6fd0">⑥</text>
-<line x1="145" y1="316" x2="349.6" y2="229.8" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#arrow-芬)"/>
-<circle cx="256.5" cy="269.0" r="9" fill="#fff" stroke="#2e8b57"/>
-<text x="256.5" y="273.0" text-anchor="middle" font-size="12" fill="#2e8b57">①</text>
+<text x="256.5" y="251.0" text-anchor="middle" font-size="12" fill="#2f6fd0">⑦</text>
+<line x1="145" y1="316" x2="354.6" y2="195.9" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#arrow-芬)"/>
+<circle cx="258.5" cy="251.0" r="9" fill="#fff" stroke="#2e8b57"/>
+<text x="258.5" y="255.0" text-anchor="middle" font-size="12" fill="#2e8b57">①</text>
 <line x1="392" y1="206" x2="422.1" y2="221.1" stroke="#c98a00" stroke-width="2.5" marker-end="url(#arrow-瑜)"/>
 <circle cx="416.0" cy="218.0" r="9" fill="#fff" stroke="#c98a00"/>
-<text x="416.0" y="222.0" text-anchor="middle" font-size="12" fill="#c98a00">②</text><circle cx="390" cy="132" r="15" fill="#fff" stroke="#b5543c" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="390" y="136" text-anchor="middle" font-size="13" fill="#b5543c" opacity="0.8">嬤</text>
+<text x="416.0" y="222.0" text-anchor="middle" font-size="12" fill="#c98a00">②</text>
+<line x1="440" y1="230" x2="432.3" y2="210.6" stroke="#c98a00" stroke-width="2.5" marker-end="url(#arrow-瑜)"/>
+<circle cx="395.0" cy="168.0" r="9" fill="#fff" stroke="#c98a00"/>
+<text x="395.0" y="172.0" text-anchor="middle" font-size="12" fill="#c98a00">④</text>
+<line x1="425" y1="192" x2="410.6" y2="215.0" stroke="#c98a00" stroke-width="2.5" marker-end="url(#arrow-瑜)"/>
+<circle cx="370.0" cy="208.0" r="9" fill="#fff" stroke="#c98a00"/>
+<text x="370.0" y="212.0" text-anchor="middle" font-size="12" fill="#c98a00">⑧</text><circle cx="390" cy="132" r="15" fill="#fff" stroke="#b5543c" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="390" y="136" text-anchor="middle" font-size="13" fill="#b5543c" opacity="0.8">嬤</text>
 <circle cx="390" cy="140" r="15" fill="#fff" stroke="#b5543c" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="390" y="144" text-anchor="middle" font-size="13" fill="#b5543c" opacity="0.8">嬤</text>
 <circle cx="520" cy="300" r="15" fill="#fff" stroke="#b5543c" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="520" y="304" text-anchor="middle" font-size="13" fill="#b5543c" opacity="0.8">嬤</text>
 <circle cx="520" cy="362" r="17" fill="#b5543c" stroke="#fff" stroke-width="2"/><text x="520" y="367" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">嬤</text><rect x="530" y="371" width="22" height="16" rx="8" fill="#fff" stroke="#b5543c"/><text x="541" y="383" text-anchor="middle" font-size="11" fill="#b5543c">跪</text>
@@ -455,13 +461,17 @@
 <circle cx="195" cy="312" r="15" fill="#fff" stroke="#2f6fd0" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="195" y="316" text-anchor="middle" font-size="13" fill="#2f6fd0" opacity="0.8">明</text>
 <circle cx="318" cy="182" r="17" fill="#2f6fd0" stroke="#fff" stroke-width="2"/><text x="318" y="187" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">明</text><rect x="328" y="191" width="22" height="16" rx="8" fill="#fff" stroke="#2f6fd0"/><text x="339" y="203" text-anchor="middle" font-size="11" fill="#2f6fd0">站</text>
 <circle cx="145" cy="316" r="15" fill="#fff" stroke="#2e8b57" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="145" y="320" text-anchor="middle" font-size="13" fill="#2e8b57" opacity="0.8">芬</text>
-<circle cx="368" cy="222" r="17" fill="#2e8b57" stroke="#fff" stroke-width="2"/><text x="368" y="227" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">芬</text><rect x="378" y="231" width="22" height="16" rx="8" fill="#fff" stroke="#2e8b57"/><text x="389" y="243" text-anchor="middle" font-size="11" fill="#2e8b57">站</text>
+<circle cx="372" cy="186" r="17" fill="#2e8b57" stroke="#fff" stroke-width="2"/><text x="372" y="191" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">芬</text><rect x="382" y="195" width="22" height="16" rx="8" fill="#fff" stroke="#2e8b57"/><text x="393" y="207" text-anchor="middle" font-size="11" fill="#2e8b57">站</text>
 <circle cx="392" cy="206" r="15" fill="#fff" stroke="#c98a00" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="392" y="210" text-anchor="middle" font-size="13" fill="#c98a00" opacity="0.8">瑜</text>
-<circle cx="440" cy="230" r="17" fill="#c98a00" stroke="#fff" stroke-width="2"/><text x="440" y="235" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">瑜</text><rect x="450" y="239" width="22" height="16" rx="8" fill="#fff" stroke="#c98a00"/><text x="461" y="251" text-anchor="middle" font-size="11" fill="#c98a00">站</text><text x="40" y="496" font-size="13" fill="#2e8b57">① <tspan fill="#2b2622">淑芬：走位：站起來走到中央，正面對阿嬤</tspan></text>
+<circle cx="440" cy="230" r="15" fill="#fff" stroke="#c98a00" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="440" y="234" text-anchor="middle" font-size="13" fill="#c98a00" opacity="0.8">瑜</text>
+<circle cx="425" cy="192" r="15" fill="#fff" stroke="#c98a00" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="425" y="196" text-anchor="middle" font-size="13" fill="#c98a00" opacity="0.8">瑜</text>
+<circle cx="400" cy="232" r="17" fill="#c98a00" stroke="#fff" stroke-width="2"/><text x="400" y="237" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">瑜</text><rect x="410" y="241" width="22" height="16" rx="8" fill="#fff" stroke="#c98a00"/><text x="421" y="253" text-anchor="middle" font-size="11" fill="#c98a00">站</text><text x="40" y="496" font-size="13" fill="#2e8b57">① <tspan fill="#2b2622">淑芬：走位：衣服丟回箱子，走到中央；每句「我沒講」往前一步</tspan></text>
 <text x="40" y="518" font-size="13" fill="#c98a00">② <tspan fill="#2b2622">小瑜：走位：站到淑芬旁邊</tspan></text>
 <text x="40" y="540" font-size="13" fill="#2f6fd0">③ <tspan fill="#2b2622">阿明：走位：退到行李箱旁</tspan></text>
-<text x="40" y="562" font-size="13" fill="#2f6fd0">④ <tspan fill="#2b2622">阿明：「不是錢！」之後再退半步</tspan></text>
-<text x="40" y="584" font-size="13" fill="#b5543c">⑤ <tspan fill="#2b2622">阿嬤：站起來，離開床</tspan></text>
-<text x="40" y="606" font-size="13" fill="#2f6fd0">⑥ <tspan fill="#2b2622">阿明：「媽，妳休息…」想上前扶，被揮開</tspan></text>
-<text x="40" y="628" font-size="13" fill="#b5543c">⑦ <tspan fill="#2b2622">阿嬤：慢慢走到桌子旁</tspan></text>
-<text x="40" y="650" font-size="13" fill="#b5543c">⑧ <tspan fill="#2b2622">阿嬤：把鍋抱到地上，扶桌緣跪下，掀蓋</tspan></text><text x="40" y="690" font-size="11.5" fill="#6f655c">實心＝這段結束時的位置，虛線圈＝出發點，數字＝移動順序，右下小標是姿式。</text><text x="40" y="708" font-size="11.5" fill="#6f655c">斜線區＝這段沒有人到過的地板（離每個人與移動路線都超過約兩個身位）。</text></svg>
+<text x="40" y="562" font-size="13" fill="#c98a00">④ <tspan fill="#2b2622">小瑜：「不是錢！」往前搶半步</tspan></text>
+<text x="40" y="584" font-size="13" fill="#2f6fd0">⑤ <tspan fill="#2b2622">阿明：「不是錢！」之後再退半步</tspan></text>
+<text x="40" y="606" font-size="13" fill="#b5543c">⑥ <tspan fill="#2b2622">阿嬤：右手撐床沿站起來，晃一下</tspan></text>
+<text x="40" y="628" font-size="13" fill="#2f6fd0">⑦ <tspan fill="#2b2622">阿明：反射性往前一步，被揮開</tspan></text>
+<text x="40" y="650" font-size="13" fill="#c98a00">⑧ <tspan fill="#2b2622">小瑜：往後退開，讓阿嬤過</tspan></text>
+<text x="40" y="672" font-size="13" fill="#b5543c">⑨ <tspan fill="#2b2622">阿嬤：慢慢走到桌子旁（約八秒）</tspan></text>
+<text x="40" y="694" font-size="13" fill="#b5543c">⑩ <tspan fill="#2b2622">阿嬤：把鍋抱到地上，扶桌緣跪下，掀蓋（鏘）</tspan></text><text x="40" y="734" font-size="11.5" fill="#6f655c">實心＝這段結束時的位置，虛線圈＝出發點，數字＝移動順序，右下小標是姿式。</text><text x="40" y="752" font-size="11.5" fill="#6f655c">斜線區＝這段沒有人到過的地板（離每個人與移動路線都超過約兩個身位）。</text></svg>

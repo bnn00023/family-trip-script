@@ -80,7 +80,7 @@ def render(script, version, role, label, actor):
         "<style>" + CSS % {"title": label + "（" + actor + "）"} + "</style></head><body>"
         '<div class="cover"><h1>早知道就出門了</h1>'
         '<p class="role">' + label + "（" + actor + " 飾）台詞本</p>"
-        '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · 約 7 分半 · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
+        '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · 約 8 分 · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
         '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。（　）裡是動作，不用唸出來。</p></div>'
         + marked + "</body></html>"
     )

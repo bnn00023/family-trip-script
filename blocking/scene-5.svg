@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 636" width="800" height="636" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif"><defs><marker id="arrow-嬤" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b5543c"/></marker><marker id="arrow-明" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2f6fd0"/></marker><marker id="arrow-芬" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2e8b57"/></marker><marker id="arrow-瑜" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c98a00"/></marker><pattern id="blank" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f1ece4"/><line x1="0" y1="0" x2="0" y2="8" stroke="#d6cbbd" stroke-width="2"/></pattern></defs><rect width="100%" height="100%" fill="#faf6f0"/><text x="40" y="34" font-size="20" font-weight="700" fill="#2b2622">第五段　鍋蓋 <tspan font-size="14" font-weight="400" fill="#6f655c">5:30–7:00</tspan></text><text x="760" y="34" text-anchor="end" font-size="13" fill="#6f655c">空白 67%</text><rect x="40" y="70" width="720" height="360" fill="#fffdf9" stroke="#9c9188" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 614" width="800" height="614" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif"><defs><marker id="arrow-嬤" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b5543c"/></marker><marker id="arrow-明" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2f6fd0"/></marker><marker id="arrow-芬" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2e8b57"/></marker><marker id="arrow-瑜" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c98a00"/></marker><pattern id="blank" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f1ece4"/><line x1="0" y1="0" x2="0" y2="8" stroke="#d6cbbd" stroke-width="2"/></pattern></defs><rect width="100%" height="100%" fill="#faf6f0"/><text x="40" y="34" font-size="20" font-weight="700" fill="#2b2622">第五段　鍋蓋 <tspan font-size="14" font-weight="400" fill="#6f655c">5:30–7:00</tspan></text><text x="760" y="34" text-anchor="end" font-size="13" fill="#6f655c">空白 76%</text><rect x="40" y="70" width="720" height="360" fill="#fffdf9" stroke="#9c9188" stroke-width="1.5"/>
 <rect x="40" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="40" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="40" y="110" width="20" height="20" fill="url(#blank)"/>
@@ -105,6 +105,9 @@
 <rect x="160" y="210" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="230" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="160" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="160" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="160" y="310" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="160" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="180" y="70" width="20" height="20" fill="url(#blank)"/>
@@ -116,6 +119,10 @@
 <rect x="180" y="190" width="20" height="20" fill="url(#blank)"/>
 <rect x="180" y="210" width="20" height="20" fill="url(#blank)"/>
 <rect x="180" y="230" width="20" height="20" fill="url(#blank)"/>
+<rect x="180" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="180" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="180" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="180" y="310" width="20" height="20" fill="url(#blank)"/>
 <rect x="180" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="180" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="200" y="70" width="20" height="20" fill="url(#blank)"/>
@@ -125,6 +132,13 @@
 <rect x="200" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="200" y="170" width="20" height="20" fill="url(#blank)"/>
 <rect x="200" y="190" width="20" height="20" fill="url(#blank)"/>
+<rect x="200" y="210" width="20" height="20" fill="url(#blank)"/>
+<rect x="200" y="230" width="20" height="20" fill="url(#blank)"/>
+<rect x="200" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="200" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="200" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="200" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="200" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="200" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="200" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="200" y="390" width="20" height="20" fill="url(#blank)"/>
@@ -135,6 +149,14 @@
 <rect x="220" y="130" width="20" height="20" fill="url(#blank)"/>
 <rect x="220" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="220" y="170" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="190" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="210" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="230" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="220" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="220" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="220" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="220" y="390" width="20" height="20" fill="url(#blank)"/>
@@ -144,6 +166,15 @@
 <rect x="240" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="240" y="130" width="20" height="20" fill="url(#blank)"/>
 <rect x="240" y="150" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="170" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="190" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="210" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="230" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="240" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="240" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="240" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="240" y="390" width="20" height="20" fill="url(#blank)"/>
@@ -152,6 +183,13 @@
 <rect x="260" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="260" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="260" y="130" width="20" height="20" fill="url(#blank)"/>
+<rect x="260" y="210" width="20" height="20" fill="url(#blank)"/>
+<rect x="260" y="230" width="20" height="20" fill="url(#blank)"/>
+<rect x="260" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="260" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="260" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="260" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="260" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="260" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="260" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="260" y="390" width="20" height="20" fill="url(#blank)"/>
@@ -159,6 +197,12 @@
 <rect x="280" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="280" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="280" y="110" width="20" height="20" fill="url(#blank)"/>
+<rect x="280" y="230" width="20" height="20" fill="url(#blank)"/>
+<rect x="280" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="280" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="280" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="280" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="280" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="280" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="280" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="280" y="390" width="20" height="20" fill="url(#blank)"/>
@@ -166,51 +210,66 @@
 <rect x="300" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="110" width="20" height="20" fill="url(#blank)"/>
+<rect x="300" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="300" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="300" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="300" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="300" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="300" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="320" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="320" y="110" width="20" height="20" fill="url(#blank)"/>
+<rect x="320" y="250" width="20" height="20" fill="url(#blank)"/>
+<rect x="320" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="320" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="320" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="320" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="320" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="320" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="320" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="320" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="110" width="20" height="20" fill="url(#blank)"/>
+<rect x="340" y="270" width="20" height="20" fill="url(#blank)"/>
+<rect x="340" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="340" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="340" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="340" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="110" width="20" height="20" fill="url(#blank)"/>
+<rect x="360" y="290" width="20" height="20" fill="url(#blank)"/>
+<rect x="360" y="310" width="20" height="20" fill="url(#blank)"/>
+<rect x="360" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="360" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="110" width="20" height="20" fill="url(#blank)"/>
+<rect x="380" y="330" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="350" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="380" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="110" width="20" height="20" fill="url(#blank)"/>
-<rect x="400" y="130" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="370" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="400" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="130" width="20" height="20" fill="url(#blank)"/>
-<rect x="420" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="390" width="20" height="20" fill="url(#blank)"/>
 <rect x="420" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="110" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="130" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="150" width="20" height="20" fill="url(#blank)"/>
-<rect x="440" y="170" width="20" height="20" fill="url(#blank)"/>
 <rect x="440" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="460" y="90" width="20" height="20" fill="url(#blank)"/>
@@ -227,7 +286,6 @@
 <rect x="480" y="150" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="170" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="190" width="20" height="20" fill="url(#blank)"/>
-<rect x="480" y="210" width="20" height="20" fill="url(#blank)"/>
 <rect x="480" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="90" width="20" height="20" fill="url(#blank)"/>
@@ -237,7 +295,6 @@
 <rect x="500" y="170" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="190" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="210" width="20" height="20" fill="url(#blank)"/>
-<rect x="500" y="230" width="20" height="20" fill="url(#blank)"/>
 <rect x="500" y="410" width="20" height="20" fill="url(#blank)"/>
 <rect x="520" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="520" y="90" width="20" height="20" fill="url(#blank)"/>
@@ -247,7 +304,6 @@
 <rect x="520" y="170" width="20" height="20" fill="url(#blank)"/>
 <rect x="520" y="190" width="20" height="20" fill="url(#blank)"/>
 <rect x="520" y="210" width="20" height="20" fill="url(#blank)"/>
-<rect x="520" y="230" width="20" height="20" fill="url(#blank)"/>
 <rect x="540" y="70" width="20" height="20" fill="url(#blank)"/>
 <rect x="540" y="90" width="20" height="20" fill="url(#blank)"/>
 <rect x="540" y="110" width="20" height="20" fill="url(#blank)"/>
@@ -415,25 +471,20 @@
 <text x="46" y="250" font-size="12" fill="#6f655c">舞台左</text>
 <text x="754" y="250" text-anchor="end" font-size="12" fill="#6f655c">舞台右</text>
 <rect x="40" y="440" width="720" height="22" rx="4" fill="#f3ebe1" stroke="#9c9188"/>
-<text x="400" y="456" text-anchor="middle" font-size="13" fill="#2b2622">觀眾席</text><circle cx="520" cy="404" r="9" fill="#3b3631"/><text x="520" y="407" text-anchor="middle" font-size="10" fill="#fff">鍋</text><line x1="318" y1="182" x2="228.3" y2="283.0" stroke="#2f6fd0" stroke-width="2.5" marker-end="url(#arrow-明)"/>
-<circle cx="266.5" cy="240.0" r="9" fill="#fff" stroke="#2f6fd0"/>
-<text x="266.5" y="244.0" text-anchor="middle" font-size="12" fill="#2f6fd0">①</text>
-<line x1="215" y1="298" x2="512.0" y2="303.6" stroke="#2f6fd0" stroke-width="2.5" marker-end="url(#arrow-明)"/>
-<circle cx="373.5" cy="301.0" r="9" fill="#fff" stroke="#2f6fd0"/>
-<text x="373.5" y="305.0" text-anchor="middle" font-size="12" fill="#2f6fd0">④</text>
-<line x1="372" y1="186" x2="563.9" y2="379.8" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#arrow-芬)"/>
-<circle cx="475.0" cy="290.0" r="9" fill="#fff" stroke="#2e8b57"/>
-<text x="475.0" y="294.0" text-anchor="middle" font-size="12" fill="#2e8b57">③</text>
+<text x="400" y="456" text-anchor="middle" font-size="13" fill="#2b2622">觀眾席</text><circle cx="520" cy="404" r="9" fill="#3b3631"/><text x="520" y="407" text-anchor="middle" font-size="10" fill="#fff">鍋</text><line x1="318" y1="182" x2="514.6" y2="294.1" stroke="#2f6fd0" stroke-width="2.5" marker-end="url(#arrow-明)"/>
+<circle cx="425.0" cy="243.0" r="9" fill="#fff" stroke="#2f6fd0"/>
+<text x="425.0" y="247.0" text-anchor="middle" font-size="12" fill="#2f6fd0">③</text>
+<line x1="375" y1="182" x2="564.2" y2="379.6" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#arrow-芬)"/>
+<circle cx="476.5" cy="288.0" r="9" fill="#fff" stroke="#2e8b57"/>
+<text x="476.5" y="292.0" text-anchor="middle" font-size="12" fill="#2e8b57">②</text>
 <line x1="400" y1="232" x2="460.4" y2="342.5" stroke="#c98a00" stroke-width="2.5" marker-end="url(#arrow-瑜)"/>
 <circle cx="435.0" cy="296.0" r="9" fill="#fff" stroke="#c98a00"/>
-<text x="435.0" y="300.0" text-anchor="middle" font-size="12" fill="#c98a00">②</text><circle cx="520" cy="362" r="17" fill="#b5543c" stroke="#fff" stroke-width="2"/><text x="520" y="367" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">嬤</text><rect x="530" y="371" width="22" height="16" rx="8" fill="#fff" stroke="#b5543c"/><text x="541" y="383" text-anchor="middle" font-size="11" fill="#b5543c">跪</text>
+<text x="435.0" y="300.0" text-anchor="middle" font-size="12" fill="#c98a00">①</text><circle cx="520" cy="362" r="17" fill="#b5543c" stroke="#fff" stroke-width="2"/><text x="520" y="367" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">嬤</text><rect x="530" y="371" width="22" height="16" rx="8" fill="#fff" stroke="#b5543c"/><text x="541" y="383" text-anchor="middle" font-size="11" fill="#b5543c">跪</text>
 <circle cx="318" cy="182" r="15" fill="#fff" stroke="#2f6fd0" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="318" y="186" text-anchor="middle" font-size="13" fill="#2f6fd0" opacity="0.8">明</text>
-<circle cx="215" cy="298" r="15" fill="#fff" stroke="#2f6fd0" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="215" y="302" text-anchor="middle" font-size="13" fill="#2f6fd0" opacity="0.8">明</text>
 <circle cx="532" cy="304" r="17" fill="#2f6fd0" stroke="#fff" stroke-width="2"/><text x="532" y="309" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">明</text><rect x="542" y="313" width="22" height="16" rx="8" fill="#fff" stroke="#2f6fd0"/><text x="553" y="325" text-anchor="middle" font-size="11" fill="#2f6fd0">蹲</text>
-<circle cx="372" cy="186" r="15" fill="#fff" stroke="#2e8b57" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="372" y="190" text-anchor="middle" font-size="13" fill="#2e8b57" opacity="0.8">芬</text>
+<circle cx="375" cy="182" r="15" fill="#fff" stroke="#2e8b57" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="375" y="186" text-anchor="middle" font-size="13" fill="#2e8b57" opacity="0.8">芬</text>
 <circle cx="578" cy="394" r="17" fill="#2e8b57" stroke="#fff" stroke-width="2"/><text x="578" y="399" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">芬</text><rect x="588" y="403" width="22" height="16" rx="8" fill="#fff" stroke="#2e8b57"/><text x="599" y="415" text-anchor="middle" font-size="11" fill="#2e8b57">蹲</text>
 <circle cx="400" cy="232" r="15" fill="#fff" stroke="#c98a00" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/><text x="400" y="236" text-anchor="middle" font-size="13" fill="#c98a00" opacity="0.8">瑜</text>
-<circle cx="470" cy="360" r="17" fill="#c98a00" stroke="#fff" stroke-width="2"/><text x="470" y="365" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">瑜</text><rect x="480" y="369" width="22" height="16" rx="8" fill="#fff" stroke="#c98a00"/><text x="491" y="381" text-anchor="middle" font-size="11" fill="#c98a00">跪</text><text x="40" y="496" font-size="13" fill="#2f6fd0">① <tspan fill="#2b2622">阿明：走位：回到行李箱旁</tspan></text>
-<text x="40" y="518" font-size="13" fill="#c98a00">② <tspan fill="#2b2622">小瑜：走過去跪在阿嬤左側，拿起御守</tspan></text>
-<text x="40" y="540" font-size="13" fill="#2e8b57">③ <tspan fill="#2b2622">淑芬：走過去蹲在阿嬤右側，側身，拿起陶碗</tspan></text>
-<text x="40" y="562" font-size="13" fill="#2f6fd0">④ <tspan fill="#2b2622">阿明：邊走邊說，蹲在後面，倒清酒敬淑芬</tspan></text><text x="40" y="602" font-size="11.5" fill="#6f655c">實心＝這段結束時的位置，虛線圈＝出發點，數字＝移動順序，右下小標是姿式。</text><text x="40" y="620" font-size="11.5" fill="#6f655c">斜線區＝這段沒有人到過的地板（離每個人與移動路線都超過約兩個身位）。</text></svg>
+<circle cx="470" cy="360" r="17" fill="#c98a00" stroke="#fff" stroke-width="2"/><text x="470" y="365" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">瑜</text><rect x="480" y="369" width="22" height="16" rx="8" fill="#fff" stroke="#c98a00"/><text x="491" y="381" text-anchor="middle" font-size="11" fill="#c98a00">跪</text><text x="40" y="496" font-size="13" fill="#c98a00">① <tspan fill="#2b2622">小瑜：走過去跪在阿嬤左側，拿起御守</tspan></text>
+<text x="40" y="518" font-size="13" fill="#2e8b57">② <tspan fill="#2b2622">淑芬：走過去蹲在阿嬤右側，側身，拿起陶碗</tspan></text>
+<text x="40" y="540" font-size="13" fill="#2f6fd0">③ <tspan fill="#2b2622">阿明：邊走邊說，蹲在後面，拿起清酒</tspan></text><text x="40" y="580" font-size="11.5" fill="#6f655c">實心＝這段結束時的位置，虛線圈＝出發點，數字＝移動順序，右下小標是姿式。</text><text x="40" y="598" font-size="11.5" fill="#6f655c">斜線區＝這段沒有人到過的地板（離每個人與移動路線都超過約兩個身位）。</text></svg>

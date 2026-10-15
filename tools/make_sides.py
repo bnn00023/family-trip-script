@@ -22,6 +22,7 @@ ROLES = [
 LINE = re.compile(r'<p><span class="who">(?P<who>[^<]+)</span>(?P<body>.*?)</p>', re.S)
 STAGE_SPAN = re.compile(r'(<span class="(?:who|act)">[^<]*</span>)')
 HEADING = re.compile(r'<h3>[^<]*<small>[^<]*</small></h3>')
+MOOD = re.compile(r'<div class="block mood"><b>情緒</b><ul>(?P<items>.*?)</ul></div>', re.S)
 
 CSS = """
 @page {
@@ -50,9 +51,6 @@ h3 small { font-weight: normal; font-size: 10pt; color: #555; margin-left: 6pt; 
 .script .dir { color: #555; }
 .block { border-left: 2.5pt solid #999; padding: 2pt 8pt; margin: 5pt 0; font-size: 9.5pt; color: #333; break-inside: avoid; }
 .block b { margin-right: 6pt; color: #111; }
-.mood ul { list-style: none; margin: 2pt 0 0; padding: 0; }
-.mood li { margin: 0; }
-.mood li.mine-mood { color: #111; font-weight: 600; }
 p.mine .who { font-size: 12pt; }
 p.mine .say { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5pt; text-underline-offset: 3pt; }
 figure.stage { float: right; width: 52%%; margin: 0 0 4pt 10pt; break-inside: avoid; }
@@ -78,6 +76,14 @@ def mark_lines(text, role):
     return LINE.sub(replace, text)
 
 
+def keep_own_mood(text, role):
+    def replace(match):
+        own = re.search(r"<li><b>" + role + r"</b>(.*?)</li>", match.group("items"))
+        return '<div class="block mood"><b>情緒</b>' + own.group(1) + "</div>"
+
+    return MOOD.sub(replace, text)
+
+
 def with_stage_figures(text, role, scenes):
     figures = iter(
         '<figure class="stage">' + make_blocking.focus_svg(pot, paths, role) +
@@ -91,8 +97,7 @@ def with_stage_figures(text, role, scenes):
 
 
 def render(script, version, role, label, actor, scenes):
-    marked = with_stage_figures(mark_lines(script, role), role, scenes)
-    marked = marked.replace("<li><b>" + role + "</b>", '<li class="mine-mood"><b>' + role + "</b>")
+    marked = with_stage_figures(keep_own_mood(mark_lines(script, role), role), role, scenes)
     count = marked.count('<p class="mine">')
     title = "早知道就出門了 · " + label + "台詞本"
     page = (

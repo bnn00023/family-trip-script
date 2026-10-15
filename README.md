@@ -25,7 +25,7 @@ python3 tools/make_sides.py
 
 ## 台詞本
 
-每個角色的台詞本 PDF 在 sides/ 資料夾，自己的台詞加粗並畫底線，開口前對方的最後一句只加粗當接話提示，每段標題旁附該段走位圖（自己的路線深色、其他人淡化），可直接列印：阿嬤 amah.pdf、阿明 aming.pdf、淑芬 shufen.pdf、小瑜 xiaoyu.pdf。
+每個角色的台詞本 PDF 在 sides/ 資料夾，自己的台詞加粗並畫底線，開口前對方的最後一句用粗斜體當接話提示，每段標題旁附該段走位圖（自己的路線深色、其他人淡化），可直接列印：阿嬤 amah.pdf、阿明 aming.pdf、淑芬 shufen.pdf、小瑜 xiaoyu.pdf。
 
 ## 走位圖
 

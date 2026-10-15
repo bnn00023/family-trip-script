@@ -58,7 +58,7 @@ h3 small { font-weight: normal; font-size: 10pt; color: #555; margin-left: 6pt; 
 .block b { margin-right: 6pt; color: #111; }
 p.mine .who { font-size: 12pt; }
 p.mine .say { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5pt; text-underline-offset: 3pt; }
-.cue { font-weight: 700; }
+.cue { font-weight: 700; font-style: italic; }
 figure.stage { float: right; width: 52%%; margin: 0 0 4pt 10pt; break-inside: avoid; }
 figure.stage svg { display: block; width: 100%%; height: auto; }
 figure.stage figcaption { font-size: 8pt; line-height: 1.3; color: #666; margin-top: 2pt; }
@@ -153,7 +153,7 @@ def render(script, version, role, label, actor, scenes):
         '<div class="cover"><h1>早知道就出門了</h1>'
         '<p class="role">' + label + "（" + actor + " 飾）台詞本</p>"
         '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · 約 8 分 · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
-        '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。<span class="cue">只加粗、沒底線</span>＝你開口前對方的最後一句，聽到它就接。（　）裡是動作，不用唸出來。每段標題右邊的圖是這段走位：深色是你，淡色是其他人。</p></div>'
+        '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。<span class="cue">粗體＋斜體</span>＝你開口前對方的最後一句，聽到它就接。（　）裡是動作，不用唸出來。每段標題右邊的圖是這段走位：深色是你，淡色是其他人。</p></div>'
         + marked + "</body></html>"
     )
     return page, count

@@ -11,6 +11,8 @@ STAGE = (40, 70, 760, 430)
 CELL = 20
 REACH = 56
 WIDTH = 800
+FOCUS_VIEW = (30, 48, 740, 420)
+OTHERS_OPACITY = 0.3
 
 CAST = {
     "阿嬤": ("嬤", "#b5543c"),
@@ -180,30 +182,48 @@ def actor(x, y, who, posture, faded=False):
     )
 
 
+def trail(who, points):
+    char, color = CAST[who]
+    parts = []
+    for (ax, ay, _, _), (bx, by, _, index) in zip(points, points[1:]):
+        gap = math.hypot(bx - ax, by - ay)
+        if gap < 1:
+            continue
+        ratio = max(0.0, (gap - 20) / gap)
+        parts.append(
+            '<line x1="%d" y1="%d" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="2.5" marker-end="url(#arrow-%s)"/>'
+            % (ax, ay, ax + (bx - ax) * ratio, ay + (by - ay) * ratio, color, char)
+        )
+        mx, my = ((ax + bx) / 2, (ay + by) / 2) if gap >= 48 else (bx - 30, by - 24)
+        parts.append('<circle cx="%.1f" cy="%.1f" r="9" fill="#fff" stroke="%s"/>' % (mx, my, color))
+        parts.append('<text x="%.1f" y="%.1f" text-anchor="middle" font-size="12" fill="%s">%s</text>' % (mx, my + 4, color, CIRCLED[index]))
+    return parts
+
+
+def stops(who, points):
+    parts = [actor(x, y, who, posture, faded=True) for x, y, posture, _ in points[:-1]]
+    x, y, posture, _ = points[-1]
+    parts.append(actor(x, y, who, posture))
+    return parts
+
+
+def focus_svg(pot, paths, who):
+    others = [name for name in CAST if name != who]
+    dimmed = "".join(part for name in others for part in trail(name, paths[name]) + stops(name, paths[name]))
+    x, y, width, height = FOCUS_VIEW
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="%d %d %d %d" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">'
+        % (x, y, width, height) + defs() + stage_base("") + pot_icon(*pot) +
+        '<g opacity="%.2f">' % OTHERS_OPACITY + dimmed + "</g>" +
+        "".join(trail(who, paths[who]) + stops(who, paths[who])) + "</svg>"
+    )
+
+
 def scene_svg(number, title, time, pot, beats, paths):
     blank = [(x, y) for x, y, center in cells() if not touched(center, paths)]
     total = sum(1 for _ in cells())
-    body = []
-    for who, points in paths.items():
-        color = CAST[who][1]
-        for (ax, ay, _, _), (bx, by, _, index) in zip(points, points[1:]):
-            gap = math.hypot(bx - ax, by - ay)
-            if gap < 1:
-                continue
-            ratio = max(0.0, (gap - 20) / gap)
-            body.append(
-                '<line x1="%d" y1="%d" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="2.5" marker-end="url(#arrow-%s)"/>'
-                % (ax, ay, ax + (bx - ax) * ratio, ay + (by - ay) * ratio, color, CAST[who][0])
-            )
-            mx, my = ((ax + bx) / 2, (ay + by) / 2) if gap >= 48 else (bx - 30, by - 24)
-            body.append('<circle cx="%.1f" cy="%.1f" r="9" fill="#fff" stroke="%s"/>' % (mx, my, color))
-            body.append('<text x="%.1f" y="%.1f" text-anchor="middle" font-size="12" fill="%s">%s</text>' % (mx, my + 4, color, CIRCLED[index]))
-    markers = []
-    for who, points in paths.items():
-        for x, y, posture, _ in points[:-1]:
-            markers.append(actor(x, y, who, posture, faded=True))
-        x, y, posture, _ = points[-1]
-        markers.append(actor(x, y, who, posture))
+    body = [part for who, points in paths.items() for part in trail(who, points)]
+    markers = [part for who, points in paths.items() for part in stops(who, points)]
     left, top, right, bottom = STAGE
     lines = [
         '<text x="%d" y="%d" font-size="13" fill="%s">%s <tspan fill="#2b2622">%s：%s</tspan></text>'

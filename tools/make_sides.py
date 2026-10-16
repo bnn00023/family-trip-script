@@ -132,7 +132,7 @@ def render(script, version, play, role, label, actor):
         "<style>" + CSS % {"title": label + "（" + actor + "）"} + "</style></head><body>"
         '<div class="cover"><h1>' + play.group("title") + "</h1>"
         '<p class="role">' + label + "（" + actor + " 飾）台詞本</p>"
-        '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · 約 " + play.group("minutes") + " 分 · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
+        '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · " + play.group("length") + " · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
         '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。<span class="cue">粗體＋斜體</span>＝你開口前對方的最後一句，聽到它就接。（　）裡是動作，不用唸出來。</p></div>'
         + marked + "</body></html>"
     )
@@ -144,7 +144,7 @@ def main():
     version = re.search(r'版本 (v[\d.]+) · 更新時間 ([\d\- :]+)', html)
     script = html[html.index('<h2 id="script">'):html.index('<h2 id="notes">')]
     script = re.sub(r'<h2 id="script">[^<]*</h2>\s*<p>.*?</p>', '', script, count=1, flags=re.S)
-    play = re.search(r"<h1>家族旅遊短劇：(?P<title>[^<]+)</h1>\s*<div class=\"byline\">四人演出 · 約 (?P<minutes>[^ ]+) 分", html)
+    play = re.search(r"<h1>家族旅遊短劇：(?P<title>[^<]+)</h1>\s*<div class=\"byline\">四人演出 · (?P<length>約 [^·<]+?) ·", html)
     SIDES.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory() as work:
         for role, slug, label, actor in ROLES:

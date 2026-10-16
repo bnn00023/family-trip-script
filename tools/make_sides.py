@@ -4,24 +4,20 @@ import sys
 import tempfile
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import make_blocking
-
 ROOT = Path(__file__).resolve().parent.parent
 PAGE = ROOT / "index.html"
 SIDES = ROOT / "sides"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 ROLES = [
-    ("阿嬤", "amah", "阿嬤 金花", "凱莉"),
-    ("阿明", "aming", "爸爸 阿明", "冠豪"),
-    ("淑芬", "shufen", "媽媽 淑芬", "雅典娜"),
+    ("阿嬤", "amah", "阿嬤", "凱莉"),
+    ("爸爸", "aming", "爸爸", "冠豪"),
+    ("媽媽", "shufen", "媽媽", "雅典娜"),
     ("小瑜", "xiaoyu", "孫女 小瑜", "鈺庭"),
 ]
 
 LINE = re.compile(r'<p><span class="who">(?P<who>[^<]+)</span>(?P<body>.*?)</p>', re.S)
 STAGE_SPAN = re.compile(r'(<span class="(?:who|act)">[^<]*</span>)')
-HEADING = re.compile(r'<h3>[^<]*<small>[^<]*</small></h3>')
 MOOD = re.compile(r'<div class="block mood"><b>情緒</b><ul>(?P<items>.*?)</ul></div>', re.S)
 ACTING = re.compile(r'<div class="block"><b>演法</b>.*?</div>\s*', re.S)
 PARAGRAPH = re.compile(r'<p(?: class="[^"]*")?>(?P<body>.*?)</p>', re.S)
@@ -59,9 +55,6 @@ h3 small { font-weight: normal; font-size: 10pt; color: #555; margin-left: 6pt; 
 p.mine .who { font-size: 12pt; }
 p.mine .say { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5pt; text-underline-offset: 3pt; }
 .cue { font-weight: 700; font-style: italic; }
-figure.stage { float: right; width: 52%%; margin: 0 0 4pt 10pt; break-inside: avoid; }
-figure.stage svg { display: block; width: 100%%; height: auto; }
-figure.stage figcaption { font-size: 8pt; line-height: 1.3; color: #666; margin-top: 2pt; }
 """
 
 
@@ -130,30 +123,17 @@ def mark_cues(text, role):
     return "".join(pieces)
 
 
-def with_stage_figures(text, role, scenes):
-    figures = iter(
-        '<figure class="stage">' + make_blocking.focus_svg(pot, paths, role) +
-        "<figcaption>實心圈＝這段結束位置，虛線圈＝出發點，數字＝移動順序。</figcaption></figure>"
-        for _, _, pot, _, paths in scenes
-    )
-    marked, count = HEADING.subn(lambda match: match.group(0) + next(figures), text)
-    if count != len(scenes):
-        raise ValueError("expected %d scene headings, found %d" % (len(scenes), count))
-    return marked
-
-
-def render(script, version, role, label, actor, scenes):
+def render(script, version, play, role, label, actor):
     marked = mark_cues(drop_acting_notes(keep_own_mood(mark_lines(script, role), role)), role)
-    marked = with_stage_figures(marked, role, scenes)
     count = marked.count('<p class="mine">')
-    title = "早知道就出門了 · " + label + "台詞本"
+    title = play.group("title") + " · " + label + "台詞本"
     page = (
         '<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><title>' + title + "</title>"
         "<style>" + CSS % {"title": label + "（" + actor + "）"} + "</style></head><body>"
-        '<div class="cover"><h1>早知道就出門了</h1>'
+        '<div class="cover"><h1>' + play.group("title") + "</h1>"
         '<p class="role">' + label + "（" + actor + " 飾）台詞本</p>"
-        '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · 約 8 分 · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
-        '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。<span class="cue">粗體＋斜體</span>＝你開口前對方的最後一句，聽到它就接。（　）裡是動作，不用唸出來。每段標題右邊的圖是這段走位：深色是你，淡色是其他人。</p></div>'
+        '<p class="meta">共 ' + str(count) + " 句台詞 · 單一場景：飯店房間 · 約 " + play.group("minutes") + " 分 · 劇本 " + version.group(1) + "（" + version.group(2) + "）</p>"
+        '<p class="legend">加粗＋<span class="say">底線</span>＝你的台詞。<span class="cue">粗體＋斜體</span>＝你開口前對方的最後一句，聽到它就接。（　）裡是動作，不用唸出來。</p></div>'
         + marked + "</body></html>"
     )
     return page, count
@@ -164,11 +144,11 @@ def main():
     version = re.search(r'版本 (v[\d.]+) · 更新時間 ([\d\- :]+)', html)
     script = html[html.index('<h2 id="script">'):html.index('<h2 id="notes">')]
     script = re.sub(r'<h2 id="script">[^<]*</h2>\s*<p>.*?</p>', '', script, count=1, flags=re.S)
-    scenes = make_blocking.walk()
+    play = re.search(r"<h1>家族旅遊短劇：(?P<title>[^<]+)</h1>\s*<div class=\"byline\">四人演出 · 約 (?P<minutes>[^ ]+) 分", html)
     SIDES.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory() as work:
         for role, slug, label, actor in ROLES:
-            page, count = render(script, version, role, label, actor, scenes)
+            page, count = render(script, version, play, role, label, actor)
             source = Path(work) / (slug + ".html")
             source.write_text(page, encoding="utf-8")
             subprocess.run(

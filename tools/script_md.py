@@ -8,7 +8,7 @@ SCRIPT_MD = ROOT / "劇本.md"
 START = '<h2 id="script">'
 END = '<h2 id="notes">'
 
-ACTORS = {"阿嬤": "凱莉", "阿明": "冠豪", "淑芬": "雅典娜", "小瑜": "鈺庭"}
+ACTORS = {"阿嬤": "凱莉", "爸爸": "冠豪", "媽媽": "雅典娜", "小瑜": "鈺庭"}
 
 HEADING_HTML = re.compile(r'^<h3>(?P<title>.+) <small>(?P<time>[^<]+)</small></h3>$')
 BLOCK_HTML = re.compile(r'^<div class="block"><b>(?P<kind>[^<]+)</b>(?P<text>.*)</div>$')
